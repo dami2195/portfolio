@@ -183,13 +183,6 @@ header::before {
     opacity: 0.3;
 }
 
-/* Responsive Styles */
-@media (max-width: 768px) {
-    .profile {
-        flex-direction: column;
-        text-align: center;
-    }
-}
 
 /* Stili per il menu */
 .fixed-menu {
@@ -362,7 +355,12 @@ header::before {
     }
 
     header{
-        margin: 50px 0 0 0;
+        margin: 30px 0 0 0;
+    }
+
+    .profile {
+        flex-direction: column;
+        text-align: center;
     }
 }
 
