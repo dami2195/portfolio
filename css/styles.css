@@ -347,8 +347,22 @@ header::before {
 
 /* Media Query per layout responsivo */
 @media (max-width: 768px) {
+    .portfolio-text{
+        display: none;
+    }
     .project {
         width: 100%;
+    }
+
+    .project-technologies li {
+        display: block; 
+        margin-bottom: 10px; 
+        min-width: 0;
+        width: 100%;
+    }
+
+    header{
+        margin: 55px 0 0 0;
     }
 }
 
