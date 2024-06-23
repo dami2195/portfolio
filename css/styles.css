@@ -309,11 +309,10 @@ header::before {
 }
 
 .project-technologies li {
-    display: flex;
-    align-items: center;
+     display: block; /* Visualizza gli elementi uno sotto l'altro */
     font-size: 1rem;
     margin-bottom: 5px;
-    width: 150px;
+    width: auto; /* Larghezza automatica per adattarsi al contenuto */
 }
 
 .project-technologies li i {
