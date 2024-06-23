@@ -1,21 +1,38 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+/* Personalizzazione della scrollbar per browser WebKit (Chrome, Safari, Edge) */
+::-webkit-scrollbar {
+    width: 10px;
+    background-color: #0c0c0c;
+}
 
-/* styles.css */
+/* Nascondi le frecce della scrollbar */
+::-webkit-scrollbar-button {
+    display: none;
+}
+
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 10px;
+    background-color: #0c0c0c; /* Sfondo del track dello scrollbar */
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 171, 251, 1);
+    border-radius: 10px;
+}
+
+/* Stili generali */
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #0c0c0c;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    /* Allinea a sinistra */
-    /* Colore di sfondo simile all'header */
 }
 
 .portfolio-text {
-    left: 0;
     position: absolute;
+    left: 0;
     letter-spacing: 12px;
     color: rgba(0, 171, 251, 1);
     font-family: "Rockwell";
@@ -63,9 +80,10 @@ body {
     align-items: center;
 }
 
-.profile-pic-wrapper svg{
+.profile-pic-wrapper svg {
     fill: white;
 }
+
 .profile-pic {
     width: 100%;
     height: 100%;
@@ -74,7 +92,6 @@ body {
     border-radius: 50%;
     transition: transform 0.3s ease;
 }
-
 
 .profile-details {
     flex-grow: 1;
@@ -111,7 +128,6 @@ body {
         width: 100%;
     }
 }
-
 
 .profile-info {
     margin-top: 20px;
@@ -166,7 +182,6 @@ header::before {
     background-size: cover, 150px 150px, 150px 150px;
     background-blend-mode: multiply;
     opacity: 0.3;
-    /* Aggiungi opacità per migliorare l'effetto */
 }
 
 /* Responsive Styles */
@@ -175,15 +190,7 @@ header::before {
         flex-direction: column;
         text-align: center;
     }
-
-    .profile-pic-wrapper {
-        width: 200px;
-        height: 200px;
-        margin-right: 0;
-        margin-bottom: 20px;
-    }
 }
-
 
 /* Stili per il menu */
 .fixed-menu {
@@ -194,8 +201,8 @@ header::before {
     left: 0;
     right: 0;
     z-index: 1000;
-    width: 100%; /* Assicurati che la larghezza sia al 100% */
-    overflow: hidden; /* Nasconde eventuali overflow */
+    width: 100%;
+    overflow: hidden;
     display: flex;
     justify-content: flex-end;
 }
@@ -227,64 +234,12 @@ header::before {
     background-color: #333;
 }
 
-/*Portfolio*/
-/* styles.css */
-
+/* Portfolio */
 .portfolio {
     padding: 80px 0;
     background-color: #0c0c0c;
-    /* Colore di sfondo scuro */
     text-align: center;
     color: #fff;
-    /* Testo bianco */
-}
-
-.section-title {
-    font-size: 2.5rem;
-    color: #fff;
-    margin-bottom: 50px;
-}
-
-.projects {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    gap: 40px;
-}
-
-/* styles.css */
-
-.portfolio {
-    padding: 80px 0;
-    background-color: #0c0c0c;
-    /* Colore di sfondo scuro */
-    text-align: center;
-    color: #fff;
-    /* Testo bianco */
-}
-
-.section-title {
-    font-size: 2.5rem;
-    color: #fff;
-    margin-bottom: 50px;
-}
-
-.projects {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 40px;
-}
-
-/* styles.css */
-
-.portfolio {
-    padding: 80px 0;
-    background-color: #0c0c0c;
-    /* Colore di sfondo scuro */
-    text-align: center;
-    color: #fff;
-    /* Testo bianco */
 }
 
 .section-title {
@@ -302,9 +257,7 @@ header::before {
 
 .project {
     width: 600px;
-    /* Larghezza del singolo progetto */
     background-color: #222;
-    /* Colore di sfondo del progetto */
     padding: 30px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -312,13 +265,9 @@ header::before {
     position: relative;
     overflow: hidden;
     margin-bottom: 40px;
-    /* Spazio tra i progetti */
 }
 
-
 .project-image {
-    width: 100%;
-    /* Dimensione dell'immagine */
     margin-bottom: 20px;
     overflow: hidden;
 }
@@ -327,12 +276,10 @@ header::before {
     width: 100%;
     height: auto;
     border-radius: 8px;
-    /* Bordo arrotondato */
 }
 
 .project-details {
     text-align: left;
-    /* Allinea il testo a sinistra */
 }
 
 .project-title {
@@ -367,7 +314,6 @@ header::before {
     font-size: 1rem;
     margin-bottom: 5px;
     width: 150px;
-
 }
 
 .project-technologies li i {
@@ -393,23 +339,19 @@ header::before {
     height: 24px;
     margin-right: 10px;
     fill: #39ff14;
-    /* Verde fluo per le icone delle tecnologie */
 }
 
 .technology-list {
     display: flex;
 }
 
-
 /* Media Query per layout responsivo */
 @media (max-width: 768px) {
     .project {
         width: 100%;
-        /* Rendi i progetti a larghezza completa su schermi piccoli */
     }
 }
 
-/* Popup container */
 /* Popup container */
 .popup {
     display: none;
@@ -428,13 +370,14 @@ header::before {
     position: relative;
     width: 80%;
     max-width: 800px;
-    background: #fff;
+    background: transparent;
     padding: 20px;
     border-radius: 8px;
     text-align: center;
 }
 
 .popup-close {
+    color: white;
     position: absolute;
     top: 10px;
     right: 10px;
@@ -480,3 +423,36 @@ header::before {
 .popup-arrow.right {
     right: 10px;
 }
+
+/* Stili per il footer */
+.site-footer {
+    width: 100%;
+    background-color: #0c0c0c;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.footer-content {
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-content p {
+    margin: 0;
+    padding: 5px 0;
+}
+
+.footer-content a {
+    color: #00abfb;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-content a:hover {
+    color: #ff6347;
+}
+

@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function() {
     var profileDescription = document.querySelector(".profile-description");
     
     // Ottieni il testo completo da mostrare
-    var fullText = profileDescription.textContent.trim();
+    var fullText = profileDescription.textContent.trim().replace(/\s\s+/g, ' ');
     
     // Nascondi il testo inizialmente
     profileDescription.textContent = "";
