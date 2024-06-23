@@ -1,0 +1,482 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* styles.css */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #0c0c0c;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    /* Allinea a sinistra */
+    /* Colore di sfondo simile all'header */
+}
+
+.portfolio-text {
+    left: 0;
+    position: absolute;
+    letter-spacing: 12px;
+    color: rgba(0, 171, 251, 1);
+    font-family: "Rockwell";
+    font-size: 12vh;
+    font-weight: bold;
+    padding: 48px;
+    text-align: left;
+    transform: scale(-1.5, -1);
+    writing-mode: vertical-lr;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+}
+
+.container {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    text-align: left;
+    width: 820px;
+}
+
+.profile-pic-wrapper {
+    width: 350px;
+    height: 350px;
+    margin-right: 20px;
+    overflow: hidden;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background: #020202;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-pic-wrapper svg{
+    fill: white;
+}
+.profile-pic {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+}
+
+
+.profile-details {
+    flex-grow: 1;
+}
+
+.profile-title {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    transition: color 0.3s ease;
+}
+
+.profile-description {
+    font-size: 1.2rem;
+    color: #ccc;
+    line-height: 1.5;
+    overflow: hidden;
+    white-space: pre-wrap;
+    width: 100%;
+    max-width: 450px;
+    height: 150px;
+}
+
+/* Nascondi il testo fino a quando non è completamente visibile */
+.profile-description.hidden {
+    visibility: hidden;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 100%;
+    }
+}
+
+
+.profile-info {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.profile-info p {
+    font-size: 1.2rem;
+}
+
+.social-icons {
+    margin-top: 20px;
+}
+
+.social-icons a {
+    color: white;
+    margin: 0 10px;
+    font-size: 24px;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: #ff6347;
+}
+
+/* Line background */
+header {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: #0c0c0c;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    text-align: center;
+}
+
+header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background:
+        radial-gradient(circle, rgba(12, 12, 12, 1), transparent),
+        linear-gradient(to right, rgb(95, 255, 255) 3px, transparent 2px),
+        linear-gradient(to bottom, rgba(95, 255, 255) 3px, transparent 2px);
+    background-size: cover, 150px 150px, 150px 150px;
+    background-blend-mode: multiply;
+    opacity: 0.3;
+    /* Aggiungi opacità per migliorare l'effetto */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .profile {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .profile-pic-wrapper {
+        width: 200px;
+        height: 200px;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+}
+
+
+/* Stili per il menu */
+.fixed-menu {
+    background-color: black;
+    height: 50px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    width: 100%; /* Assicurati che la larghezza sia al 100% */
+    overflow: hidden; /* Nasconde eventuali overflow */
+    display: flex;
+    justify-content: flex-end;
+}
+
+.menu {
+    list-style: none;
+    padding: 16px 24px;
+    margin: 0;
+}
+
+.menu li {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+.menu li:first-child {
+    margin-left: 0;
+}
+
+.menu li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.menu li a:hover {
+    background-color: #333;
+}
+
+/*Portfolio*/
+/* styles.css */
+
+.portfolio {
+    padding: 80px 0;
+    background-color: #0c0c0c;
+    /* Colore di sfondo scuro */
+    text-align: center;
+    color: #fff;
+    /* Testo bianco */
+}
+
+.section-title {
+    font-size: 2.5rem;
+    color: #fff;
+    margin-bottom: 50px;
+}
+
+.projects {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 40px;
+}
+
+/* styles.css */
+
+.portfolio {
+    padding: 80px 0;
+    background-color: #0c0c0c;
+    /* Colore di sfondo scuro */
+    text-align: center;
+    color: #fff;
+    /* Testo bianco */
+}
+
+.section-title {
+    font-size: 2.5rem;
+    color: #fff;
+    margin-bottom: 50px;
+}
+
+.projects {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+}
+
+/* styles.css */
+
+.portfolio {
+    padding: 80px 0;
+    background-color: #0c0c0c;
+    /* Colore di sfondo scuro */
+    text-align: center;
+    color: #fff;
+    /* Testo bianco */
+}
+
+.section-title {
+    font-size: 2.5rem;
+    color: #fff;
+    margin-bottom: 50px;
+}
+
+.projects {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+}
+
+.project {
+    width: 600px;
+    /* Larghezza del singolo progetto */
+    background-color: #222;
+    /* Colore di sfondo del progetto */
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 40px;
+    /* Spazio tra i progetti */
+}
+
+
+.project-image {
+    width: 100%;
+    /* Dimensione dell'immagine */
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.project-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    /* Bordo arrotondato */
+}
+
+.project-details {
+    text-align: left;
+    /* Allinea il testo a sinistra */
+}
+
+.project-title {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.project-description {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.project-technologies {
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+.project-technologies p {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.project-technologies ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.project-technologies li {
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+    margin-bottom: 5px;
+    width: 150px;
+
+}
+
+.project-technologies li i {
+    margin-right: 5px;
+}
+
+.project-link {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.project-link:hover {
+    background-color: #0056b3;
+}
+
+.project-technologies li .icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+    fill: #39ff14;
+    /* Verde fluo per le icone delle tecnologie */
+}
+
+.technology-list {
+    display: flex;
+}
+
+
+/* Media Query per layout responsivo */
+@media (max-width: 768px) {
+    .project {
+        width: 100%;
+        /* Rendi i progetti a larghezza completa su schermi piccoli */
+    }
+}
+
+/* Popup container */
+/* Popup container */
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-content {
+    position: relative;
+    width: 80%;
+    max-width: 800px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.popup-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.popup-images {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow: hidden;
+    position: relative;
+}
+
+.popup-images img {
+    max-width: 100%;
+    margin: 10px;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.popup-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.popup-arrow.left {
+    left: 10px;
+}
+
+.popup-arrow.right {
+    right: 10px;
+}
