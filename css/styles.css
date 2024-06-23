@@ -354,9 +354,6 @@ header::before {
         width: 100%;
     }
 
-    header{
-        margin: 30px 0 0 0;
-    }
 
     .profile {
         flex-direction: column;
