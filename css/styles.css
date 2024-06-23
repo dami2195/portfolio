@@ -308,9 +308,11 @@ header::before {
 }
 
 .project-technologies li {
-     display: block; /* Visualizza gli elementi uno sotto l'altro */
+    display: block; /* Visualizza gli elementi uno sotto l'altro */
     font-size: 1rem;
     margin-bottom: 5px;
+    min-width: 115px;
+    padding: 0 12px 0 0;
     width: auto; /* Larghezza automatica per adattarsi al contenuto */
 }
 
