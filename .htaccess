@@ -1,0 +1,3 @@
+RewriteEngine on
+RewriteCond %{HTTPS} off
+RewriteRule (.*) https://domain.xyz/$1 [R=301,L]
