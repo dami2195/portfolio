@@ -369,6 +369,10 @@ header::before {
         border-radius: 50%;
         width: 225px;
     }
+
+    .icon{
+        min-width: 50%;
+    }
 }
 
 /* Popup container */
