@@ -306,10 +306,15 @@ header::before {
     /* Visualizza gli elementi uno sotto l'altro */
     font-size: 1rem;
     margin-bottom: 5px;
-    min-width: 115px;
+    min-width: 25%;
+    max-width: 25%;
     padding: 0 12px 0 0;
     width: auto;
-    /* Larghezza automatica per adattarsi al contenuto */
+    display: flex;
+    flex-direction: column; /* Disposizione a colonna */
+    align-items: left; /* Centra orizzontalmente */
+    width: auto; /* Larghezza automatica */
+    margin-bottom: 10px; /* Spazio tra gli elementi */
 }
 
 .project-technologies li i {
@@ -335,6 +340,17 @@ header::before {
     height: 24px;
     margin-right: 10px;
     fill: #39ff14;
+    margin-right: 0; /* Rimuovi margine a destra */
+    margin-bottom: 5px; /* Aggiungi margine inferiore */
+}
+
+
+.project-technologies li {
+    
+}
+
+.project-technologies .icon {
+    
 }
 
 .technology-list {
@@ -370,18 +386,6 @@ header::before {
         width: 225px;
     }
 
-    .project-technologies li {
-        display: flex;
-        flex-direction: column; /* Disposizione a colonna */
-        align-items: center; /* Centra orizzontalmente */
-        width: auto; /* Larghezza automatica */
-        margin-bottom: 10px; /* Spazio tra gli elementi */
-    }
-
-    .project-technologies .icon {
-        margin-right: 0; /* Rimuovi margine a destra */
-        margin-bottom: 5px; /* Aggiungi margine inferiore */
-    }
 }
 
 /* Popup container */
