@@ -12,7 +12,8 @@
 ::-webkit-scrollbar-track {
     box-shadow: inset 0 0 5px grey;
     border-radius: 10px;
-    background-color: #0c0c0c; /* Sfondo del track dello scrollbar */
+    background-color: #0c0c0c;
+    /* Sfondo del track dello scrollbar */
 }
 
 ::-webkit-scrollbar-thumb {
@@ -301,12 +302,14 @@ header::before {
 }
 
 .project-technologies li {
-    display: block; /* Visualizza gli elementi uno sotto l'altro */
+    display: block;
+    /* Visualizza gli elementi uno sotto l'altro */
     font-size: 1rem;
     margin-bottom: 5px;
     min-width: 115px;
     padding: 0 12px 0 0;
-    width: auto; /* Larghezza automatica per adattarsi al contenuto */
+    width: auto;
+    /* Larghezza automatica per adattarsi al contenuto */
 }
 
 .project-technologies li i {
@@ -340,16 +343,17 @@ header::before {
 
 /* Media Query per layout responsivo */
 @media (max-width: 768px) {
-    .portfolio-text{
+    .portfolio-text {
         display: none;
     }
+
     .project {
         width: 100%;
     }
 
     .project-technologies li {
-        display: block; 
-        margin-bottom: 10px; 
+        display: block;
+        margin-bottom: 10px;
         min-width: 0;
         width: 100%;
     }
@@ -358,6 +362,12 @@ header::before {
     .profile {
         flex-direction: column;
         text-align: center;
+    }
+
+
+    .profile-pic-wrapper img {
+        border-radius: 50%;
+        width: 250px;
     }
 }
 
@@ -464,4 +474,3 @@ header::before {
 .footer-content a:hover {
     color: #ff6347;
 }
-
