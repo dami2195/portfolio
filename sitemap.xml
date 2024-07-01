@@ -5,19 +5,19 @@
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
     <url>
-        <loc>https://www.damianogazzino.ch/</loc>
-        <lastmod>2024-07-01</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>1.0</priority>
-        <xhtml:link rel="alternate" hreflang="it" href="https://www.damianogazzino.ch/" />
-        <image:image>
-            <image:loc>https://www.damianogazzino.ch/images/profile.jpg</image:loc>
-            <image:title>Profilo di Damiano Gazzino</image:title>
-        </image:image>
-        <og:title>Portfolio di Damiano Gazzino</og:title>
-        <og:description>Portfolio di Damiano Gazzino, sviluppatore web e software. Scopri i miei progetti e contattami per collaborazioni.</og:description>
-        <keywords>Damiano Gazzino, sviluppatore web, sviluppatore software, portfolio, progetti, contatti</keywords>
-    </url>
+    <loc>https://www.damianogazzino.ch/</loc>
+    <lastmod>2024-07-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.damianogazzino.ch/" />
+    <image:image>
+        <image:loc>https://www.damianogazzino.ch/images/profile.jpg</image:loc>
+        <image:title>Profilo di Damiano Gazzino</image:title>
+    </image:image>
+    <og:title>Portfolio di Damiano Gazzino</og:title>
+    <og:description>Portfolio di Damiano Gazzino, sviluppatore web e software. Scopri i miei progetti e contattami per collaborazioni.</og:description>
+</url>
+
 
     <!-- Esempi aggiuntivi, se presenti altre pagine o contenuti -->
     <!-- <url>
