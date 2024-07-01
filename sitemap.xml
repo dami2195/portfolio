@@ -14,8 +14,8 @@
         <image:loc>https://www.damianogazzino.ch/images/profile.jpg</image:loc>
         <image:title>Profilo di Damiano Gazzino</image:title>
     </image:image>
-    <meta property="og:title">Portfolio di Damiano Gazzino</meta>
-    <meta property="og:description">Portfolio di Damiano Gazzino, sviluppatore web e software. Scopri i miei progetti e contattami per collaborazioni.</meta>
+    <meta property="og:title" content="Portfolio di Damiano Gazzino" />
+<meta property="og:description" content="Portfolio di Damiano Gazzino, sviluppatore web e software. Scopri i miei progetti e contattami per collaborazioni." />
 </url>
 
 
