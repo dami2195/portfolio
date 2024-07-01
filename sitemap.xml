@@ -1,33 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:og="http://ogp.me/ns#"
-        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
-        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
+    <!-- Homepage -->
     <url>
-    <loc>https://www.damianogazzino.ch/</loc>
-    <lastmod>2024-07-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-    <xhtml:link rel="alternate" hreflang="it" href="https://www.damianogazzino.ch/" />
-    <image:image>
-        <image:loc>https://www.damianogazzino.ch/images/profile.jpg</image:loc>
-        <image:title>Profilo di Damiano Gazzino</image:title>
-    </image:image>
-</url>
-
-
-
-    <!-- Esempi aggiuntivi, se presenti altre pagine o contenuti -->
-    <!-- <url>
-        <loc>https://www.damianogazzino.ch/progetti</loc>
-        <lastmod>2024-06-15</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-        <xhtml:link rel="alternate" hreflang="it" href="https://www.damianogazzino.ch/progetti" />
-        <keywords>Damiano Gazzino, progetti, sviluppatore web</keywords>
-    </url> -->
-
-    <!-- Aggiungi ulteriori URL qui, se necessario -->
-
+        <loc>https://www.damianogazzino.ch/</loc>
+        <lastmod>2024-07-01</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>1.0</priority>
+    </url>
+    
 </urlset>
