@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /prova/
+Disallow: /prova.html
+Allow: /
+Sitemap: https://damianogazzino.ch/sitemap.xml
