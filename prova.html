@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <!-- Metadati di base -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Damiano Gazzino | Full Stack Developer</title>
+    <meta name="description" content="Damiano Gazzino | Full Stack Developer">
+    <meta name="keywords"
+        content="Sviluppatore web, programmatore, sviluppo software, web development, Damiano Gazzino">
+    <meta property="og:title" content="Damiano Gazzino - Full Stack Developer">
+    <meta property="og:description"
+        content="Esplora il portfolio di Damiano Gazzino, con progetti di programmazione, sviluppo web e intelligenza artificiale.">
+    <meta property="og:image" content="https://damianogazzino.ch/images/profile.jpg">
+    <meta property="og:url" content="https://damianogazzino.ch">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Playfair+Display:wght@700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Damiano Gazzino">
+
+</head>
+<style>
+
+    .box,
+    .box-glow {
+        max-height: 150px;
+        max-width: 450px;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        overflow: hidden;
+        z-index: 0;
+        border-radius: 10px;
+    }
+
+    .box-glow {
+        overflow: hidden;
+        max-height: 200px;
+
+        /* Glow Blur */
+        filter: blur(20px);
+    }
+
+    .box:before,
+    .box-glow:before {
+        content: '';
+        z-index: -2;
+        text-align: center;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(0deg);
+        position: absolute;
+        width: 99999px;
+        height: 99999px;
+        background-image: conic-gradient(rgba(0, 0, 0, 0), #1976ed, rgba(0, 0, 0, 0) 25%);
+    }
+
+    .box:after {
+        content: '';
+        position: absolute;
+        z-index: -1;
+        /* border width */
+        left: 5px;
+        top: 5px;
+        /* double the px from the border width left */
+        width: calc(100% - 10px);
+        height: calc(100% - 10px);
+        /*bg color*/
+        background: #050505;
+
+    }
+
+
+    body {
+        margin: 0px;
+    }
+
+    /* Navigazione */
+    .navbar {
+        background-color: rgba(0, 0, 0, 0.8);
+        border: none;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        z-index: 999;
+        transition: background-color 0.3s ease-in-out;
+    }
+
+    .navbar:hover {
+        background-color: rgba(0, 0, 0, 0.9);
+    }
+
+    .navbar-nav li a {
+        color: white;
+        transition: color 0.3s ease-in-out;
+    }
+
+    .navbar-nav li a:hover {
+        color: #ffdd57;
+    }
+
+    .navbar-nav li a::before {
+        content: "";
+        position: absolute;
+        width: 0%;
+        height: 2px;
+        bottom: 0;
+        left: 0;
+        background-color: #ffdd57;
+        visibility: hidden;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .navbar-nav li a:hover::before {
+        visibility: visible;
+        width: 100%;
+    }
+
+    /* Icone animate */
+    .fas {
+        margin-right: 8px;
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .navbar-nav li a:hover .fas {
+        transform: rotate(360deg);
+    }
+
+    :root {
+        --text-color: #00fbff;
+    }
+
+    /* Reset di base */
+    html,
+    body {
+        height: 100%;
+        margin: 0;
+        font-family: 'Roboto', sans-serif;
+        scroll-behavior: smooth;
+    }
+
+    /* Header con effetto parallasse */
+    header {
+        background: url('images/bg-image.jpg') no-repeat center center fixed;
+        background-size: cover;
+        position: relative;
+        height: 100vh;
+        color: white;
+    }
+
+    header::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.6);
+        z-index: 0;
+    }
+
+    /* Effetti di testo */
+    .header-content {
+        position: relative;
+        z-index: 1;
+        text-align: center;
+        padding-top: 15%;
+        animation: fadeIn 1.5s ease-in-out;
+    }
+
+    .header-content h1 {
+        font-family: 'Playfair Display', serif;
+        font-size: 4rem;
+        font-weight: 700;
+        letter-spacing: 2px;
+        margin-bottom: 0.5rem;
+    }
+
+    .header-content h2 {
+        font-size: 1.8rem;
+        margin-bottom: 2rem;
+    }
+
+    .header-content .btn-primary {
+        background-color: #ffdd57;
+        background-image: linear-gradient(to right, #ffdd57, #ffc107);
+        border: none;
+        padding: 15px 30px;
+        font-size: 1.2rem;
+        transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+
+    .header-content .btn-primary:hover {
+        background-color: #ffc107;
+        transform: scale(1.05);
+    }
+
+    /* Navigazione */
+    .navbar {
+        background-color: rgba(0, 0, 0, 0.8);
+        border: none;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        z-index: 999;
+        transition: background-color 0.3s ease-in-out;
+    }
+
+    .navbar:hover {
+        background-color: rgba(0, 0, 0, 0.9);
+    }
+
+    .navbar-nav li a {
+        color: white;
+        transition: color 0.3s ease-in-out;
+    }
+
+    .navbar-nav li a:hover {
+        color: #ffdd57;
+    }
+
+    .navbar-nav li a::before {
+        content: "";
+        position: absolute;
+        width: 0%;
+        height: 2px;
+        bottom: 0;
+        left: 0;
+        background-color: #ffdd57;
+        visibility: hidden;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .navbar-nav li a:hover::before {
+        visibility: visible;
+        width: 100%;
+    }
+
+    /* Icone animate */
+    .fas {
+        margin-right: 8px;
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .navbar-nav li a:hover .fas {
+        transform: rotate(360deg);
+    }
+
+    /* Effetti immagine profilo */
+    .profile-img-wrapper {
+        position: relative;
+        display: inline-block;
+        margin-bottom: 1rem;
+    }
+
+    .profile-img {
+        border-radius: 50%;
+        width: 320px;
+        height: 320px;
+
+        object-fit: cover;
+        border: 6px solid var(--text-color);
+        box-shadow: 0 0 60px var(--text-color);
+    }
+
+    /* Animazioni */
+    @keyframes fadeIn {
+        0% {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    /* Sezione ancoraggio */
+    section {
+        padding: 60px 0;
+        text-align: center;
+    }
+
+    .center-box{
+        width: 700px!important;
+    }
+</style>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-inverse" role="navigation" aria-label="Menu principale">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar"
+                    aria-expanded="false">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#su-di-me"><i class="fas fa-user"></i> Su di me</a></li>
+                    <li><a href="#progetti"><i class="fas fa-code"></i> Progetti</a></li>
+                    <li><a href="#contatti"><i class="fas fa-envelope"></i> Contatti</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <header>
+        <div class="header-content">
+            <img src="images/profile.jpg" class="rounded-circle img-fluid profile-img"
+                alt="Damiano Gazzino Full Stack Developer" width="250" />
+            <div class="center-box">
+                <div class="box-glow"></div>
+                <div class="box">
+                    <h1><strong>Damiano Gazzino</strong></h1>
+                    <h2>Sviluppatore Full Stack</h2>
+                </div>
+            </div>
+
+        </div>
+
+    </header>
+
+</body>
+
+</html>
