@@ -89,12 +89,6 @@ body {
     }
 }
 
-.content-container {
-    max-width: 800px;
-    /* Larghezza massima per il contenuto */
-    margin: 60px auto;
-    /* Centra il contenuto orizzontalmente */
-}
 
 .section {
     border-radius: 10px;
@@ -159,6 +153,10 @@ body {
     .content-description {
         flex: 1 1 100%;
         /* Disposizione a una colonna per schermi piccoli */
+    }
+
+    .section{
+        padding: 0!important;
     }
 }
 

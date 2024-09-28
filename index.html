@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="css/system/bootstrap.min.css">
     <script src="js/system/jquery.min.js"></script>
     <script src="js/system/bootstrap.min.js"></script>
+    <script src="js/animations.js"></script>
+
     <link
         href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Playfair+Display:wght@700&display=swap"
         rel="stylesheet">
@@ -51,11 +53,11 @@
 
         <div class="header-content">
             <div class="content">
-                <div class="col-sm-12 col-md-5 content-img">
+                <div class="col-md-5 content-img fade-in-up">
                     <img src="images/profile.jpg" class="img-fluid profile-img"
                         alt="Damiano Gazzino, Sviluppatore Full Stack e Web Developer" />
                 </div>
-                <div class="center-box col-sm-12 col-md-7">
+                <div class="center-box col-sm-12 col-md-7 fade-in-up">
                     <h1>Damiano Gazzino</h1>
                     <h2>Sviluppatore Full Stack</h2>
                 </div>
@@ -64,8 +66,8 @@
     </header>
     <div class="content-container">
         <div class="section" id="about-me">
-            <h2 id="description-title">Chi sono</h2>
-            <div class="content-description">
+            <h2 id="description-title" class="fade-in-left">Chi sono</h2>
+            <div class="content-description fade-in-left">
                 <p>Ciao! Sono Damiano, un <strong>sviluppatore full stack</strong> con una forte passione per la
                     <strong>tecnologia</strong> e l'<strong>innovazione</strong>. La mia carriera è incentrata sullo
                     <strong>sviluppo software</strong> e sulla <strong>progettazione di applicazioni web</strong>, dove
@@ -87,9 +89,9 @@
         </div>
 
         <div class="section projects" id="projects">
-            <h2>I miei progetti</h2>
+            <h2 class="fade-in-left">I miei progetti</h2>
             <div class="tech-section" id="tech-section">
-                <div class="col-sm-12 col-md-6 project content-description">
+                <div class="col-sm-12 col-md-6 project content-description zoom-in">
                     <div class="card">
                         <img src="images/gestionale.png" class="project-image"
                             alt="Gestionale Web Club Pistola Tesserete">
@@ -98,15 +100,14 @@
                             <p class="card-text">Un gestionale web all’avanguardia per la gestione completa del
                                 club,
                                 con
-                                funzionalità per la gestione dei soci, licenze, fatturazioni e statistiche
-                                dettagliate.
+                                funzionalità per la gestione dei soci, licenze, fatturazioni e statistiche.
                             </p>
                             <a href="./projects/detail.html?id=gestionale_web" class="btn btn-primary">Scopri di
                                 più</a>
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-12 col-md-6 project content-description">
+                <div class="col-sm-12 col-md-6 project content-description zoom-in">
                     <div class="card">
                         <img src="images/crm.png" class="project-image" alt="CRM Web">
                         <div class="card-body">
@@ -119,7 +120,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-12 col-md-6 project content-description">
+                <div class="col-sm-12 col-md-6 project content-description zoom-in">
                     <div class="card">
                         <img src="images/shopcar.png" class="project-image" alt="Piattaforma E-Commerce">
                         <div class="card-body">
@@ -131,7 +132,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-12 col-md-6 project content-description">
+                <div class="col-sm-12 col-md-6 project content-description zoom-in">
                     <div class="card">
                         <img src="images/testing_api.png" class="project-image" alt="Tester API">
                         <div class="card-body">
@@ -144,7 +145,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-12 col-md-6 project content-description">
+                <div class="col-sm-12 col-md-6 project content-description zoom-in">
                     <div class="card">
                         <img src="images/contabilita_index.png" class="project-image"
                             alt="Gestione contabilità finanziaria">
@@ -162,11 +163,12 @@
 
             </div>
         </div>
-        
+
     </div>
     <footer class="footer">
         <p id="footer-text">&copy; 2024 Damiano Gazzino. Tutti i diritti riservati.</p>
     </footer>
+
 </body>
 
 </html>

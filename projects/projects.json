@@ -45,7 +45,11 @@
         {
             "id": "tester_api",
             "title": "Tester API",
-            "meta": {},
+            "meta": {
+                "description" : "Tester API è uno strumento innovativo progettato per aiutare gli sviluppatori a testare e gestire le API in modo semplice ed efficiente. Con un'interfaccia intuitiva e funzionalità avanzate, rende i test API automatizzati e manuali un processo rapido e preciso.",
+                "keywords" : "testing API, software per sviluppatori, gestione API, test automatizzati, interfaccia intuitiva, strumento di sviluppo software",
+                "author" : "Damiano Gazzino"
+            },
             "header": {
                 "h1": "Tester API: Software Innovativo per Sviluppatori",
                 "p": "Strumento avanzato per il testing e la gestione delle API in modo efficiente"
@@ -82,7 +86,11 @@
         {
             "id": "ecommerce",
             "title": "Piattaforma E-Commerce",
-            "meta": {},
+            "meta": {
+                "description" : "Piattaforma E-Commerce è una soluzione completa per la gestione di prodotti, clienti e ordini, progettata per garantire un'esperienza di acquisto fluida e sicura. Con funzionalità scalabili e un'API RESTful, supporta una crescita illimitata del tuo business online.",
+                "keywords": "eCommerce, gestione prodotti, sistema di pagamento, API RESTful, sviluppo web, piattaforma online, shopping",
+                "author" : "Damiano Gazzino"
+            },
             "header": {
                 "h1": "Piattaforma E-Commerce",
                 "p": "E-commerce personalizzato per una gestione efficace di prodotti e clienti"
@@ -123,7 +131,11 @@
         {
             "id": "crm_web",
             "title": "CRM Web",
-            "meta": {},
+            "meta": {
+                "description": "CRM Web è una soluzione personalizzata progettata per ottimizzare la gestione delle relazioni con i clienti. Con funzionalità modulari e un'interfaccia user-friendly, offre un modo efficace per gestire contatti, lead e opportunità di vendita.",
+                "keywords": "CRM personalizzato, gestione clienti, ottimizzazione vendite, sistema modulare, software di gestione, relazioni clienti, sviluppo web",
+                "author" : "Damiano Gazzino"
+            },
             "header": {
                 "h1": "CRM Web",
                 "p": "Soluzione personalizzata per ottimizzare la gestione delle relazioni con i clienti"
@@ -165,7 +177,11 @@
         {
             "id": "gestionale_web",
             "title": "Gestionale web Club Pistola Tesserete",
-            "meta": {},
+            "meta": {
+                "description": "Il Gestionale Club Pistola Tesserete è una soluzione su misura per la gestione delle attività di un club di tiro, consentendo una gestione efficace di soci, tasse, stand e munizioni. Semplice da usare e scalabile, si adatta alle esigenze specifiche del club.",
+                "keywords": "Club Pistola Tesserete, gestionale club di tiro, gestione soci, tasse associative, prenotazione stand, sistema amministrativo, sviluppo software, soluzione personalizzata",
+                "author" : "Damiano Gazzino"
+            },
             "header": {
                 "h1": "Gestionale Club Pistola Tesserete",
                 "p": "Gestione completa e personalizzata per club di tiro: tasse, soci, stand e munizioni"

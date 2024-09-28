@@ -5,159 +5,192 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="css/system/bootstrap.min.css">
-    <script src="js/system/jquery.min.js"></script>
-    <script src="js/system/bootstrap.min.js"></script>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Playfair+Display:wght@700&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <title>Damiano Gazzino | Full Stack Developer - Soluzioni Digitali Innovative</title>
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/index.css">
-    <link rel="stylesheet" href="css/navbar.css">
-    <link rel="stylesheet" href="css/aboutme.css">
-    <link rel="stylesheet" href="css/projects.css">
+    <title>Damiano Gazzino | Full Stack Developer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <style>
+        /* CSS Animazioni */
+        .fade-in-up,
+        .fade-in-left,
+        .zoom-in,
+        .fade-in-title {
+            opacity: 0; /* Nascondi inizialmente */
+            transform: translateY(30px); /* Effetto "up" */
+            transition: opacity 0.8s ease, transform 0.8s ease; /* Ridotto il tempo di animazione per una risposta più rapida */
+        }
 
-    <meta name="description"
-        content="Damiano Gazzino, sviluppatore web specializzato in sviluppo software, applicazioni web e e-commerce. Scopri progetti innovativi e contattami per collaborazioni.">
-    <meta name="keywords"
-        content="Sviluppatore web, sviluppatore full stack, programmazione web, sviluppo software, e-commerce, siti web responsivi, API, microservizi, Damiano Gazzino">
-    <meta name="robots" content="index, follow">
-    <meta name="author" content="Damiano Gazzino">
+        /* Specifico per zoom */
+        .zoom-in {
+            transform: scale(0.8); /* Partiamo da uno zoom ridotto */
+        }
+
+        /* Quando l'elemento è visibile */
+        .animate-in {
+            opacity: 1;
+            transform: translateY(0) scale(1); /* Reset delle trasformazioni */
+        }
+
+        /* Stili generali */
+        body {
+            min-height: 100vh;
+            background-color: #0c0c0c;
+            font-family: 'Roboto', sans-serif;
+            color: white;
+            padding: 0;
+            margin: 0;
+        }
+
+        header {
+            background: linear-gradient(to bottom, #040404, #0c0c0c);
+            position: relative;
+            height: calc(100vh);
+            color: white;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .content-img {
+            border-radius: 50%;
+            border: 6px solid rgba(30, 87, 123);
+            box-shadow: 0 0 60px rgba(30, 87, 123);
+            overflow: hidden;
+            max-height: 350px;
+            max-width: 350px;
+        }
+
+        .content-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .center-box {
+            background-color: #112d3f;
+            border-radius: 24px;
+            padding: 20px;
+            max-width: 550px;
+            box-shadow: 0 0 60px rgba(30, 87, 123);
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .content-container {
+            width: 70%;
+            margin: 0 auto;
+            padding: 40px 0;
+        }
+
+        .content-container h2 {
+            color: #A0D3E8;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #666;
+        }
+
+        .content-description {
+            background: linear-gradient(135deg, #1a1a1a, #262626);
+            border-radius: 12px;
+            padding: 40px;
+            margin-bottom: 40px;
+            box-shadow: 0 8px 30px rgba(0, 153, 255, 0.3);
+            color: white;
+            font-size: 1.4rem;
+        }
+
+        footer {
+            color: #666;
+            padding: 20px;
+            text-align: center;
+        }
+    </style>
 </head>
 
 <body>
-    
 
-    <header class="col-sm-12">
-        <nav class="navbar navbar-inverse" role="navigation" aria-label="Menu principale">
-            <div class="container-fluid">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar"
-                        aria-expanded="false">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                </div>
-                <div class="collapse navbar-collapse" id="myNavbar">
-                    <ul class="nav navbar-nav navbar-right">
-                        <li><a href="#about-me"><i class="fas fa-user"></i> Chi sono</a></li>
-                        <li><a href="#projects"><i class="fas fa-code"></i> Progetti</a></li>
-                        <li><a href="#contact"><i class="fas fa-envelope"></i> Contatti</a></li>
-                    </ul>
-                </div>
+    <!-- Navbar -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar" aria-expanded="false">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
             </div>
-        </nav>
-        <div class="header-content">
-            <div class="content">
-                <div class="col-sm-12 col-md-5 content-img">
-                    <img src="images/profile.jpg" class="img-fluid profile-img"
-                        alt="Damiano Gazzino, Sviluppatore Full Stack e Web Developer" />
-                </div>
-                <div class="center-box col-sm-12 col-md-7">
-                    <h1>Damiano Gazzino</h1>
-                    <h2>Sviluppatore Full Stack e Web Developer</h2>
-                </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#about-me">Chi sono</a></li>
+                    <li><a href="#projects">Progetti</a></li>
+                    <li><a href="#">Contatti</a></li>
+                </ul>
             </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header>
+        <div class="content-img fade-in-up">
+            <img src="images/profile.jpg" alt="Damiano Gazzino">
+        </div>
+        <div class="center-box fade-in-up">
+            <h1>Damiano Gazzino</h1>
+            <h2>Sviluppatore Full Stack</h2>
         </div>
     </header>
 
-    <section id="about-me" class="content-description">
-        <h2>Chi sono</h2>
-        <p>Ciao! Sono Damiano, un <strong>sviluppatore full stack</strong> con una forte passione per la
-            <strong>tecnologia</strong> e l'<strong>innovazione</strong>. La mia carriera è incentrata sullo
-            <strong>sviluppo software</strong> e sulla <strong>progettazione di applicazioni web</strong>, dove mi
-            impegno a trasformare idee in soluzioni digitali efficaci.
-        </p>
-        <p>Mi dedico a creare <strong>siti web responsivi</strong> e utilizzo tecnologie moderne come
-            <strong>API</strong> e <strong>microservizi</strong> per garantire applicazioni scalabili e performanti.
-            Sono sempre curioso di apprendere e rimanere aggiornato sulle <strong>tendenze del settore</strong>,
-            affrontando nuove sfide che mi permettono di crescere professionalmente.
-        </p>
-        <p>La mia attitudine al problem-solving e la mia capacità di adattarmi rapidamente a nuove tecnologie mi
-            permettono di affrontare con successo progetti complessi. Sono una persona motivata e orientata ai
-            risultati, sempre pronta a contribuire al miglioramento continuo e all'innovazione. La mia dedizione al
-            lavoro e la mia voglia di apprendere mi spingono a dare il massimo in ogni sfida che affronto.
-        </p>
-    </section>
-
-    <section id="projects" class="content-description">
-        <h2>I miei progetti</h2>
-        <div class="row">
-            <div class="col-sm-12 col-md-6 project">
-                <div class="card">
-                    <img src="images/gestionale.png" class="project-image" alt="Gestionale Web Club Pistola Tesserete">
-                    <div class="card-body">
-                        <h5 class="card-title"><strong>Gestionale Web Club Pistola Tesserete</strong></h5>
-                        <p class="card-text">Un gestionale web all’avanguardia per la gestione completa del club, con
-                            funzionalità per la gestione dei soci, licenze, fatturazioni e statistiche dettagliate.</p>
-                        <a href="./projects/detail.html?id=gestionale_web" class="btn btn-primary">Scopri di più</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-12 col-md-6 project">
-                <div class="card">
-                    <img src="images/crm.png" class="project-image" alt="CRM Web">
-                    <div class="card-body">
-                        <h5 class="card-title"><strong>CRM Web</strong></h5>
-                        <p class="card-text">Un sistema CRM scalabile e moderno, progettato con un'architettura
-                            API-first, per garantire una sincronizzazione dei dati efficiente tramite microservizi.</p>
-                        <a href="./projects/detail.html?id=crm_web" class="btn btn-primary">Scopri di più</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-12 col-md-6 project">
-                <div class="card">
-                    <img src="images/shopcar.png" class="project-image" alt="Piattaforma E-Commerce">
-                    <div class="card-body">
-                        <h5 class="card-title"><strong>Piattaforma E-Commerce</strong></h5>
-                        <p class="card-text">Sviluppo di una piattaforma e-commerce innovativa, progettata per offrire
-                            un'esperienza utente fluida e prestazioni superiori su ogni dispositivo.</p>
-                        <a href="./projects/detail.html?id=ecommerce" class="btn btn-primary">Scopri di più</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-12 col-md-6 project">
-                <div class="card">
-                    <img src="images/testing_api.png" class="project-image" alt="Tester API">
-                    <div class="card-body">
-                        <h5 class="card-title"><strong>Tester API</strong></h5>
-                        <p class="card-text">Un software innovativo per il testing delle API, dotato di un'interfaccia
-                            intuitiva e funzionalità di test automatizzati per semplificare il lavoro degli
-                            sviluppatori.</p>
-                        <a href="./projects/detail.html?id=tester_api" class="btn btn-primary">Scopri di più</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-12 col-md-6 project">
-                <div class="card">
-                    <img src="images/contabilita_index.png" class="project-image"
-                        alt="Gestione contabilità finanziaria">
-                    <div class="card-body">
-                        <h5 class="card-title"><strong>Gestione Contabilità Finanziaria</strong></h5>
-                        <p class="card-text">Un software intuitivo per la gestione contabile aziendale, progettato per
-                            semplificare la gestione delle finanze e garantire report accurati.</p>
-                        <a href="./projects/detail.html?id=contabilita" class="btn btn-primary">Scopri di più</a>
-                    </div>
-                </div>
+    <!-- Chi Sono Section -->
+    <div class="content-container">
+        <div class="section" id="about-me">
+            <h2 class="fade-in-title">Chi sono</h2> <!-- Aggiunta classe animazione per titolo -->
+            <div class="content-description fade-in-left">
+                <p>Ciao! Sono Damiano, un <strong>sviluppatore full stack</strong> con una forte passione per la <strong>tecnologia</strong> e l'<strong>innovazione</strong>.</p>
             </div>
         </div>
-    </section>
 
-    <section id="contact">
-        <h2>Contatti</h2>
-        <p>Se sei interessato a collaborare su progetti di sviluppo web o hai bisogno di consulenze, <a
-                href="#contact">contattami qui!</a></p>
-    </section>
+        <!-- Progetti Section -->
+        <div class="section" id="projects">
+            <h2 class="fade-in-title">I miei progetti</h2> <!-- Aggiunta classe animazione per titolo -->
+            <div class="content-description zoom-in">
+                <p>Progetto 1: Gestionale Web Club Pistola Tesserete.</p>
+            </div>
+            <div class="content-description zoom-in">
+                <p>Progetto 2: CRM Web.</p>
+            </div>
+        </div>
+    </div>
 
+    <!-- Footer -->
     <footer>
         <p>&copy; 2024 Damiano Gazzino. Tutti i diritti riservati.</p>
     </footer>
 
-    <script src="js/main.js"></script>
+    <!-- JavaScript per l'animazione on scroll -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const elements = document.querySelectorAll('.fade-in-up, .fade-in-left, .zoom-in, .fade-in-title');
+            let animatedElements = new Set(); // Set per tenere traccia degli elementi già animati
+
+            // Funzione per animare gli elementi visibili
+            function animateElements() {
+                elements.forEach(el => {
+                    const rect = el.getBoundingClientRect();
+                    if (rect.top < window.innerHeight && rect.bottom > 0 && !animatedElements.has(el)) {
+                        animatedElements.add(el); // Aggiungi l'elemento al set
+                        el.classList.add('animate-in');
+                    }
+                });
+            }
+
+            // Aggiungi listener di scroll
+            window.addEventListener('scroll', () => {
+                requestAnimationFrame(animateElements);
+            });
+
+            // Inizializza l'animazione per gli elementi già visibili
+            animateElements();
+        });
+    </script>
 </body>
 
 </html>

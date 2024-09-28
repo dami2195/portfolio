@@ -12,6 +12,9 @@
     <link rel="stylesheet" href="../css/system/bootstrap.min.css">
     <script src="../js/system/jquery.min.js"></script>
     <script src="../js/system/bootstrap.min.js"></script>
+    <script src="../js/animations.js"></script>
+
+
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="../css/styles.css">
@@ -38,7 +41,8 @@
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="../index.html#about-me"><i class="fas fa-user"></i> Chi sono</a></li>
                     <li><a href="../index.html#projects"><i class="fas fa-code"></i> Progetti</a></li>
-                    <li><a href="../index.html#contact"><i class="fas fa-envelope"></i> Contatti</a></li>
+                    <li><a href="https://www.linkedin.com/in/damiano-gazzino-9983b01a2/"><i class="fas fa-envelope"></i>
+                            Contatti</a></li>
                 </ul>
             </div>
         </div>
@@ -53,25 +57,26 @@
 
     <div class="content-container">
         <div class="section" id="description-section">
-            <h2 id="description-title"></h2>
-            <div class="tech-section" id="description-content">
+            <h2 id="description-title" class="fade-in-left"></h2>
+            <div class="tech-section fade-in-left" id="description-content">
                 <div class="content-description"></div>
             </div>
         </div>
 
         <div class="section">
-            <h2>Tecnologie Utilizzate</h2>
-            <div class="tech-section" id="tech-section"></div>
+            <h2 class="fade-in-left">Tecnologie Utilizzate</h2>
+            <div class="tech-section fade-in-left" id="tech-section"></div>
         </div>
     </div>
+    <footer class="footer">
+        <p id="footer-text">&copy; 2024 Damiano Gazzino. Tutti i diritti riservati.</p>
+    </footer>
 
-    
 
     <script>
         // JSON data
 
         $(document).ready(function () {
-
             function getQueryParam(param) {
                 const urlParams = new URLSearchParams(window.location.search);
                 return urlParams.get(param);
@@ -80,16 +85,20 @@
             const projectId = getQueryParam('id');
             $.getJSON("projects.json")
                 .done(function (projects) {
-                    console.log("Dati JSON caricati:", projects); // Log dei dati caricati
+                    console.log("Dati JSON caricati:", projects);
                     const projectData = projects.projects.find(p => p.id === projectId);
 
                     if (!projectData) {
                         console.error("Progetto non trovato con ID:", projectId);
-                        return; // Esci se il progetto non è stato trovato
+                        return;
                     }
 
                     // Imposta il titolo della pagina
                     $("title").text(projectData.title);
+
+                    // Imposta i meta tag per descrizione e parole chiave
+                    $("meta[name='description']").attr("content", projectData.meta.description || ""); // Usa il valore dal JSON, o una stringa vuota se non presente
+                    $("meta[name='keywords']").attr("content", projectData.meta.keywords || "");
 
                     // Popola l'intestazione
                     $("#header-title").text(projectData.header.h1);
@@ -98,12 +107,10 @@
                     // Popola la sezione della descrizione
                     const description = projectData.sections[0];
                     $("#description-title").text(description.title);
-                    $(".content-description").empty(); // Svuota il contenitore prima di aggiungere nuovi contenuti
+                    $(".content-description").empty();
 
-                    // Aggiungi ogni paragrafo come HTML
                     description.content.forEach(function (paragraph) {
-                        // Usa append per aggiungere il markup HTML direttamente
-                        $(".content-description").append(`<div>${paragraph}</div>`); // Avvolgi in <div> per una corretta visualizzazione
+                        $(".content-description").append(`<div>${paragraph}</div>`);
                     });
 
                     // Popola la sezione delle tecnologie utilizzate, se esiste
@@ -125,6 +132,7 @@
                     console.error("Errore nel caricamento del JSON:", textStatus, error);
                 });
         });
+
     </script>
 </body>
 

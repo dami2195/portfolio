@@ -3,12 +3,14 @@
 }
 
 
-body{
-    min-height: 100vh; /* 100% dell'altezza del viewport */
+body {
+    min-height: 100vh;
+    /* 100% dell'altezza del viewport */
     background-color: #0c0c0c;
 }
+
 header {
-    background: linear-gradient(to bottom, #040404, #0c0c0c)!important;
+    background: linear-gradient(to bottom, #040404, #0c0c0c) !important;
 
     background-size: cover;
     position: relative;
@@ -44,42 +46,52 @@ header::before {
     box-shadow: 0 0 60px var(--text-color);
     position: relative;
     overflow: hidden;
-    max-height: 350px;
-    max-width: 350px;
+    height: 300px;
+    width: 300px;
     /* L'immagine all'interno verrà ritagliata seguendo il border-radius */
     margin: auto 0;
     padding: 0;
 }
 
 .profile-img {
-    width: 100%;
+    max-width: 300px;
     height: 100%;
     margin: 12px 0 0 0 !important;
     object-fit: cover;
 }
 
 .content {
-    display: flex; /* Imposta il contenitore come flex */
-    align-items: center; /* Centra verticalmente gli elementi */
-    justify-content: center; /* Centra orizzontalmente gli elementi */
-    height: 100%; /* Assicurati che il contenitore abbia un'altezza definita */
-    margin: 0 auto; /* Margine automatico per il contenitore */
+    display: flex;
+    /* Imposta il contenitore come flex */
+    align-items: center;
+    /* Centra verticalmente gli elementi */
+    justify-content: center;
+    /* Centra orizzontalmente gli elementi */
+    height: 100%;
+    /* Assicurati che il contenitore abbia un'altezza definita */
+    margin: 0 auto;
+    /* Margine automatico per il contenitore */
 }
 
 .center-box {
     background-color: #112d3f;
     border-radius: 24px 0 24px 0;
-    margin: 0 0 0 36px; /* Rimuovi il margine per centrare correttamente */
+    margin: 0 0 0 36px;
+    /* Rimuovi il margine per centrare correttamente */
     position: relative;
     padding-inline: 0.5rem 0.8rem;
     text-decoration: none;
     max-width: 550px !important;
     height: 150px;
     box-shadow: 0 0 60px var(--text-color);
-    display: flex; /* Imposta display flex per contenuto interno */
-    flex-direction: column; /* Orienta il contenuto in colonna */
-    justify-content: center; /* Centra verticalmente il contenuto */
-    text-align: left; /* Allinea il testo al centro */
+    display: flex;
+    /* Imposta display flex per contenuto interno */
+    flex-direction: column;
+    /* Orienta il contenuto in colonna */
+    justify-content: center;
+    /* Centra verticalmente il contenuto */
+    text-align: left;
+    /* Allinea il testo al centro */
     padding: 0 0 0 36px;
 }
 
@@ -116,17 +128,19 @@ header::before {
     opacity: 1;
 }
 
-.center-box h1{
+.center-box h1 {
+    font-size: 3.5rem;
     margin: 10px 0;
 }
-.center-box h2{
+
+.center-box h2 {
     font-size: 1.75rem;
     margin: 5px 0px 20px 0px;
 }
 
 
 /*Container*/
-.container{
+.container {
     margin: 0 0 24px 0;
     width: 100%;
 }
@@ -145,7 +159,7 @@ header::before {
     /* Leggero effetto glow */
     display: flex;
     flex-direction: column;
-    
+
     color: white;
     font-size: 1.40rem;
 
@@ -157,11 +171,12 @@ header::before {
     clear: both;
 }
 
-.content-container{
+.content-container {
     justify-content: space-between;
     width: 70%;
-    margin:  0 auto;
+    margin: 0 auto;
 }
+
 .content-container h2 {
     color: #A0D3E8;
     /* Blu navy */
@@ -170,11 +185,11 @@ header::before {
     margin-bottom: 20px;
 }
 
-.content-container p{
+.content-container p {
     margin: 0 0 18px 0;
 }
 
-.projects{
+.projects {
     margin: 64px 0 0 0;
 }
 
@@ -183,34 +198,45 @@ header::before {
 }
 
 .project {
-    margin-bottom: 2rem; /* Spaziatura tra i progetti */
-    height: 410px;
+    margin-bottom: 2rem;
+    /* Spaziatura tra i progetti */
+    min-height: 410px;
 }
 
 .project-image {
     height: 180;
-    width: 350; /* Mantiene l'immagine responsiva */
-    height: auto; /* Mantiene le proporzioni */
-    border-radius: 0.5rem; /* Arrotonda gli angoli dell'immagine */
+    width: 350;
+    /* Mantiene l'immagine responsiva */
+    height: auto;
+    /* Mantiene le proporzioni */
+    border-radius: 0.5rem;
+    /* Arrotonda gli angoli dell'immagine */
 }
 
 .card {
-    height: 350px; /* Imposta un'altezza fissa per le schede */
-    overflow: hidden; /* Nasconde il contenuto che esce dalla scheda */
-    transition: transform 0.3s; /* Aggiungi un effetto di transizione */
+    height: 350px;
+    /* Imposta un'altezza fissa per le schede */
+    overflow: hidden;
+    /* Nasconde il contenuto che esce dalla scheda */
+    transition: transform 0.3s;
+    /* Aggiungi un effetto di transizione */
 }
 
 .card-title {
-    color: #112d3f; /* Colore del titolo */
+    color: #112d3f;
+    /* Colore del titolo */
 }
 
 .btn-primary {
-    background-color: #112d3f; /* Colore del pulsante */
-    border: none; /* Rimuovi il bordo */
+    background-color: #112d3f;
+    /* Colore del pulsante */
+    border: none;
+    /* Rimuovi il bordo */
 }
 
 .btn-primary:hover {
-    background-color: #84bde1; /* Colore del pulsante al passaggio del mouse */
+    background-color: #84bde1;
+    /* Colore del pulsante al passaggio del mouse */
 }
 
 
@@ -221,27 +247,84 @@ header::before {
     padding: 20px;
     text-align: center;
 }
+
 @media (max-width: 768px) {
-    header{
+    header {
         height: calc(70vh);
 
     }
+
     .content {
-        flex-direction: column; /* Mantieni la direzione colonna per piccoli schermi */
+        flex-direction: column;
+        /* Mantieni la direzione colonna per piccoli schermi */
     }
 
     .content-img {
-        max-height: 275px; /* Riduci l'altezza massima per schermi piccoli */
-        max-width: 275px; /* Riduci la larghezza massima per schermi piccoli */
+        margin: 48px  0;
+        max-height: 250px;
+        /* Riduci l'altezza massima per schermi piccoli */
+        max-width: 250px;
+        /* Riduci la larghezza massima per schermi piccoli */
+    }
+
+    .project-image {
+        height: 180!important;
     }
 
     .center-box {
         width: 100%;
-        padding: 1rem; /* Aggiungi padding per contenuto più piccolo */
+        padding: 1rem;
+        /* Aggiungi padding per contenuto più piccolo */
         margin: 0 0 48px 0;
     }
 
-    .content-description{
+    .content-container {
+        width: 90%;
+    }
+
+    .card {
+        height: 375px!important;
+    }
+
+    .content-description {
         width: 98%;
     }
+}
+
+/* CSS Animazioni */
+.fade-in-up,
+.fade-in-left,
+.zoom-in,
+.fade-in-title {
+    opacity: 0;
+    /* Nascondi inizialmente */
+    transform: translateY(30px);
+    /* Effetto "up" */
+    transition: opacity 0.8s ease, transform 0.8s ease;
+    /* Ridotto il tempo di animazione per una risposta più rapida */
+}
+
+/* Specifico per zoom */
+.zoom-in {
+    transform: scale(0.8);
+    /* Partiamo da uno zoom ridotto */
+}
+
+/* Quando l'elemento è visibile */
+.animate-in {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    /* Reset delle trasformazioni */
+}
+
+/* Animazioni specifiche per i titoli */
+.fade-in-title {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.animate-title-in {
+    opacity: 1;
+    transform: translateY(0);
 }
