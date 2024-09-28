@@ -1,0 +1,189 @@
+body {
+    background-color: #0c0c0c;
+    color: #ffffff;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    /* Rimuove il margine predefinito */
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to bottom, #040404, #183a4e, #0c0c0c)!important;
+    /* Gradiente dal grigio scuro al blu scurissimo e ritorno al grigio scuro */
+    padding: 40px 20px;
+    text-align: center;
+    height: 450px;
+    /* Altezza aumentata per dare più respiro */
+}
+
+.header h1 {
+    color: #ffffff;
+    /* Testo bianco per contrasto */
+    font-size: 5rem;
+    /* Aumentato per maggiore impatto */
+    margin-bottom: 15px;
+    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.7);
+    /* Ombra più forte per far risaltare il testo */
+    letter-spacing: 1px;
+    /* Maggiore spaziatura tra le lettere */
+    transition: color 0.3s ease, transform 0.3s ease;
+    /* Aggiunto effetto trasformazione */
+    opacity: 0;
+    /* Impostiamo l'opacità iniziale a 0 per l'animazione */
+    transform: translateY(-20px);
+    /* Iniziamo con un leggero spostamento verso l'alto */
+    animation: fadeInTitle 1s forwards;
+    /* Applicazione dell'animazione */
+}
+
+/* Aggiungi questa sezione per l'animazione */
+@keyframes fadeInTitle {
+    from {
+        opacity: 0;
+        /* Inizia invisibile */
+        transform: translateY(-20px);
+        /* Inizia spostato verso l'alto */
+    }
+
+    to {
+        opacity: 1;
+        /* Diventa visibile */
+        transform: translateY(0);
+        /* Torna nella posizione originale */
+    }
+}
+
+.header h1:hover {
+    color: #b0c4de;
+    /* Cambiamento su hover verso un azzurro pallido */
+    transform: scale(1.05);
+    /* Effetto ingrandimento su hover */
+}
+
+.header p {
+    color: #d1d1d1;
+    /* Testo più chiaro per leggibilità */
+    font-size: 1.6rem;
+    /* Aumentato per maggiore leggibilità */
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.6;
+    /* Maggiore spaziatura per una lettura più facile */
+    animation: fadeIn 1s ease forwards;
+    /* Aggiunta animazione */
+}
+
+/* Animazione */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.content-container {
+    max-width: 800px;
+    /* Larghezza massima per il contenuto */
+    margin: 60px auto;
+    /* Centra il contenuto orizzontalmente */
+}
+
+.section {
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+.section {
+    margin: 40px 0;
+    /* Spaziatura verticale */
+}
+
+/* Sezione delle tecnologie */
+.tech-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+    padding: 20px;
+    border-radius: 15px;
+}
+
+
+
+/* Hover effect - solo per animazioni di profondità */
+
+.tech-title {
+    display: flex;
+    align-items: center;
+    color: #00aaff;
+    /* Colore vivido per i titoli */
+    font-size: 1.6em;
+    margin-bottom: 15px;
+}
+
+.tech-title i {
+    font-size: 1.8em;
+    margin-right: 12px;
+    color: #00ccff;
+}
+
+.tech-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+
+
+.tech-list li i {
+    color: #66b2ff;
+    margin-right: 8px;
+    font-size: 1.3em;
+}
+
+.tech-list li:hover {
+    color: #ffffff;
+    /* Leggero cambiamento solo sul testo */
+}
+
+@media (max-width: 768px) {
+    .content-description {
+        flex: 1 1 100%;
+        /* Disposizione a una colonna per schermi piccoli */
+    }
+}
+
+.tech-list li,
+.content-description {
+    font-size: 1.1em;
+    color: #d1d1d1;
+    /* Colore più chiaro per il testo */
+    padding: 8px 0;
+    display: flex;
+    align-items: center;
+    transition: color 0.3s ease;
+}
+
+.content-description {
+    /* Evita che il contenuto venga visualizzato come blocchi separati */
+    display: inline; /* O usa display: inline-block; se necessario */
+    padding: 24px;
+}
+
+.content-description div {
+    margin-bottom: 16px; /* Imposta il margine inferiore tra i paragrafi */
+}
+
+/* Opzionale: Se vuoi anche un margine superiore */
+.content-description div:first-child {
+    margin-top: 0; /* Rimuovi il margine superiore dal primo paragrafo */
+}
