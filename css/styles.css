@@ -29,6 +29,7 @@ header::before {
     z-index: 0;
 }
 
+
 .header-content {
     width: 80%;
     height: 100%;
@@ -147,29 +148,20 @@ header::before {
 
 .content-description {
     flex: 1 1 45%;
-    /* Due colonne per schermi più grandi */
     background: linear-gradient(135deg, #1a1a1a, #262626);
-    /* Sfumatura fissa tra due tonalità di grigio scuro */
     border-radius: 12px;
     padding: 40px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     transform: translateY(-8px);
-    /* Effetto sollevamento */
     box-shadow: 0 8px 30px rgba(0, 153, 255, 0.3);
-    /* Leggero effetto glow */
     display: flex;
     flex-direction: column;
-
     color: white;
     font-size: 1.40rem;
-
+    max-height: 525px;
+    margin-bottom: 12px;
 }
 
-.content-container::after {
-    content: "";
-    display: block;
-    clear: both;
-}
 
 .content-container {
     justify-content: space-between;
@@ -188,33 +180,25 @@ header::before {
 .content-container p {
     margin: 0 0 18px 0;
 }
+.card-header {
+    display: flex;
+}
 
 .projects {
     margin: 64px 0 0 0;
 }
 
 .project-image {
-    max-width: 350px;
-}
-
-.project {
-    margin-bottom: 2rem;
-    /* Spaziatura tra i progetti */
-    min-height: 410px;
-}
-
-.project-image {
-    height: 180;
-    width: 350;
-    /* Mantiene l'immagine responsiva */
+    max-width: 100%;
+    /* L'immagine si adatta al contenitore */
     height: auto;
     /* Mantiene le proporzioni */
     border-radius: 0.5rem;
-    /* Arrotonda gli angoli dell'immagine */
+    margin: 0 auto;
 }
 
 .card {
-    height: 350px;
+    min-height: 330px;
     /* Imposta un'altezza fissa per le schede */
     overflow: hidden;
     /* Nasconde il contenuto che esce dalla scheda */
@@ -222,8 +206,11 @@ header::before {
     /* Aggiungi un effetto di transizione */
 }
 
+.card-body{
+    height: 150px!important;
+}
 .card-title {
-    color: #112d3f;
+    color: #a0d3e8;
     /* Colore del titolo */
 }
 
@@ -260,7 +247,7 @@ header::before {
     }
 
     .content-img {
-        margin: 48px  0;
+        margin: 48px 0;
         max-height: 250px;
         /* Riduci l'altezza massima per schermi piccoli */
         max-width: 250px;
@@ -268,7 +255,7 @@ header::before {
     }
 
     .project-image {
-        height: 180!important;
+        height: 180 !important;
     }
 
     .center-box {
@@ -283,10 +270,12 @@ header::before {
     }
 
     .card {
-        height: 375px!important;
+        height: 100px!important;
     }
 
     .content-description {
+        height: auto;
+        max-height: 100%;
         width: 98%;
     }
 }
