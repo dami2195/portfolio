@@ -1,0 +1,27 @@
+.card {
+    min-width: 200px;
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card-img-top {
+    object-fit: cover; /* Mantiene le proporzioni dell'immagine */
+    height: 200px; /* Altezza fissa per uniformare le card */
+}
+
+#projects{
+    margin: 0 auto;
+}
+
+#projects h2{
+    margin: 0 0 24px 0;
+}
+.project{
+    width: 50%;
+    height: 325px;
+    margin: 24px 0;
+    padding: 12px 24px;
+}
