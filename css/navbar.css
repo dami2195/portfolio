@@ -1,12 +1,21 @@
-
-/* Icone animate */
 .navbar {
-    /*background: #040404; /* Sfumatura dal blu scuro a trasparente */
     background-color: #040404;
-    border: 0px solid transparent;
+    border: 0;
     margin: 0 !important;
     width: 100%;
     z-index: 9999999;
+}
+
+.navbar-nav {
+    display: flex;
+    /* Allinea gli elementi del menu in orizzontale */
+    align-items: center;
+    /* Allinea verticalmente al centro */
+}
+
+.navbar-nav li {
+    display: flex;
+    align-items: center;
 }
 
 .fas {
@@ -16,4 +25,61 @@
 
 .navbar-nav li a:hover .fas {
     transform: rotate(360deg);
+}
+
+/* Stile per le lingue */
+.menu-item a {
+    padding: 6px 24px !important;
+}
+
+.menu-item i {
+    width: 20px;
+}
+
+.menu-item-language {
+    padding-right: 10px;
+}
+
+/* Stile per il separatore */
+.separator {
+    background-color: #ccc;
+    /* Colore del separatore */
+    width: 1px;
+    height: 1em;
+    /* Altezza pari al testo */
+    margin-left: 10px;
+    margin-right: 10px;
+    align-self: center;
+    /* Assicura che sia allineato verticalmente */
+}
+
+
+.menu-item-language:nth-child(7),
+.menu-item-language:nth-child(8) {
+    width: 0;
+    visibility: collapse;
+}
+
+@media (max-width: 768px) {
+    .nav {
+        display: inline-block
+    }
+
+    .separator,
+    .menu-item-language:nth-child(1),
+    .menu-item-language:nth-child(2) {
+        height: 0;
+        visibility: collapse;
+    }
+
+    .menu-item-language:nth-child(7),
+    .menu-item-language:nth-child(8) {
+        visibility: visible;
+    }
+
+    .menu-item-language:nth-child(3),
+    .menu-item-language:nth-child(4) {
+        visibility: visible;
+    }
+
 }

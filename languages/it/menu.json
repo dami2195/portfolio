@@ -1,0 +1,15 @@
+{
+    "menu": {
+        "aboutMe": {
+            "label": "Chi sono",
+            "href": "./index.html?lang=it#about-me" 
+        },
+        "projects": {
+            "label": "Progetti",
+            "href": "./index.html?lang=it#projects"
+        },
+        "contactMe": {
+            "label": "Contatti"
+        }
+    }
+}

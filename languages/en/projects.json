@@ -1,0 +1,304 @@
+{
+    "projects": [
+        {
+            "id": "accounting",
+            "title": "Financial Accounting Software",
+            "meta": {
+                "description": "A project to develop a <strong>custom business accounting software</strong>, aimed at simplifying <strong>business finance management</strong> and improving the accuracy of <strong>financial reporting for small and medium enterprises</strong>.",
+                "keywords": "custom business accounting software, business finance management, financial reporting, business expense tracking, accounting tools for SMEs",
+                "author": "Damiano Gazzino"
+            },
+            "header": {
+                "h1": "Financial Accounting Management for Businesses",
+                "p": "A personal project to enhance skills in <strong>accounting and financial management for businesses</strong>."
+            },
+            "sections": [
+                {
+                    "title": "Project Description",
+                    "content": [
+                        "The <strong>Financial Accounting Software</strong> was developed as a personal project to delve into the concepts of <strong>accounting management</strong> and improve skills in <strong>financial planning</strong>. The software aims to simplify the <strong>recording of accounting transactions</strong>, providing an easy-to-use tool for managing finances both at the business and personal levels.",
+                        "One of the main features of the software is the ability to monitor both the <strong>current financial situation</strong> and the <strong>future outlook</strong>. With dynamic and intuitive graphs, the user can clearly visualize the <strong>financial trends</strong>, forecasting how they will evolve over time. This allows for not only precise tracking of <strong>income</strong> and <strong>expenses</strong> but also for more effective planning based on future scenarios."
+                    ]
+                },
+                {
+                    "title": "Objectives and Main Features",
+                    "content": [
+                        "The goal of the project was to develop a tool that goes beyond simple financial data recording, offering a <strong>clear and interactive view</strong> of the <strong>economic performance</strong>. The main features of the software include:",
+                        "<ol><li><strong>Accounting Transactions Recording</strong>: The software allows users to record all transactions, such as <strong>income</strong> and <strong>expenses</strong>, with the ability to categorize them for a clear and organized view of financial flows.</li><li><strong>Monitoring Current Financial Performance</strong>: Through a series of graphs, users can view the real-time status of their finances, identifying potential issues and opportunities to improve economic management.</li><li><strong>Financial Forecasting</strong>: Based on historical data entered, the software provides a <strong>projection of future finances</strong>, allowing users to predict how certain decisions or scenarios may affect the financial situation in the medium and long term.</li><li><strong>Financial Planning</strong>: The forecasting features allow users to leverage existing data to <strong>plan future financial decisions</strong> more strategically and informed.</li></ol>"
+                    ]
+                },
+                {
+                    "title": "Project Motivation",
+                    "content": [
+                        "This project was born from the desire to explore <strong>accounting management</strong> and <strong>financial forecasting</strong> in more depth. The idea behind its development was to create a tool that, in addition to recording transactions, would provide <strong>graphical visualizations</strong> of the financial trends, making it easier to interpret the data and simplify planning.",
+                        "During development, I focused on the importance of <strong>presenting financial data</strong> in an intuitive and accessible way. The integration of interactive graphs offers an immediate and easily understandable representation of financial trends without relying on more complex traditional methods. This approach also enables users with less technical expertise to quickly grasp their financial situation and make more informed decisions."
+                    ]
+                },
+                {
+                    "title": "Technologies Used",
+                    "techCategories": [
+                        {
+                            "title": "Frontend",
+                            "technologies": [
+                                "Fluent",
+                                "WPF (Windows Presentation Foundation)"
+                            ]
+                        },
+                        {
+                            "title": "Backend & Database",
+                            "technologies": [
+                                "C#",
+                                "SQLite"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "tester_api",
+            "title": "API Tester",
+            "meta": {
+                "description": "An <strong>advanced tool for API developers</strong>, designed to optimize the testing process of interfaces. It includes both <strong>automated and manual testing</strong>, with a simple and intuitive interface. This tool enhances the development team's efficiency, improving code quality.",
+                "keywords": "API testing tool for developers, automated API tests, manual API test management, software for API developers, API testing tool, intuitive interface for API testers, detailed reports for API tests, simplified API debugging",
+                "author": "Damiano Gazzino"
+            },
+            "header": {
+                "h1": "API Tester: Complete Tool for API Developers",
+                "p": "A modern solution to optimize <strong>API validation and monitoring</strong> during software development. It offers advanced features for both automated and manual testing, supporting multiple protocols and formats."
+            },
+            "sections": [
+                {
+                    "title": "Project Description",
+                    "content": [
+                        "The <strong>API testing software</strong> was developed to improve developer efficiency by providing tools to perform both automated and manual tests quickly and accurately. With this tool, developers can verify the correct functioning of APIs throughout all stages of development.",
+                        "The user-friendly interface makes interacting with the tool intuitive, allowing developers to diagnose errors and anomalies more easily. Supporting various protocols and formats, the software integrates seamlessly into different development environments.",
+                        "Additionally, generating detailed reports on tests helps quickly identify issues, contributing to the optimization of applications and reducing time spent on debugging."
+                    ]
+                },
+                {
+                    "title": "Objectives and Key Features",
+                    "content": [
+                        "The main goal of this project is to provide a versatile and efficient tool for development teams, improving API quality through a complete testing process. Key features include:",
+                        "1. <strong>Automated API testing</strong>: Allows you to create and run large-scale tests without manual intervention, ensuring continuous verification throughout the entire development cycle. The tests are compatible with various protocols, making the software suitable for a wide range of uses.",
+                        "2. <strong>Custom manual tests</strong>: When deeper insights are required, the system allows for targeted manual tests, offering developers complete flexibility in verifying API behavior.",
+                        "3. <strong>Intuitive interface</strong>: Designed to make interaction with the tool easier, the interface is meant to be user-friendly even for less experienced users, enabling smooth management of the various features.",
+                        "4. <strong>Detailed reports</strong>: Each test generates a detailed report, allowing for quick analysis of errors or malfunctions, speeding up the debugging process and software improvement."
+                    ]
+                },
+                {
+                    "title": "Project Rationale",
+                    "content": [
+                        "The project was initiated to provide an efficient alternative to traditional API testing methods. With the increasing complexity and interconnection of modern applications, it became essential to have a tool that could quickly and accurately verify the integrity of APIs.",
+                        "The vision behind this software was to create a platform that would simplify developers' daily tasks, offering a tool capable of automating testing while also supporting manual management for more complex cases, all within an easy-to-use environment."
+                    ]
+                },
+                {
+                    "title": "Technologies Used",
+                    "techCategories": [
+                        {
+                            "title": "Frontend",
+                            "technologies": [
+                                "WPF (Windows Presentation Foundation)"
+                            ]
+                        },
+                        {
+                            "title": "Backend & Database",
+                            "technologies": [
+                                "C#",
+                                "SQLite"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },        
+        {
+            "id": "ecommerce",
+            "title": "E-Commerce Platform for Car and Motorcycle Spare Parts",
+            "meta": {
+                "description": "Development project of a <strong>scalable eCommerce platform for the sale of car and motorcycle spare parts</strong>, optimized to ensure high performance on both mobile and desktop devices, and to offer a simple and intuitive user experience.",
+                "keywords": "eCommerce platform for car spare parts, online motorcycle parts sales, platform for car and motorcycle spare parts stores, automotive eCommerce platform, spare parts eCommerce scalability",
+                "author": "Damiano Gazzino"
+            },
+            "header": {
+                "h1": "E-Commerce Platform for Selling Car and Motorcycle Spare Parts",
+                "p": "A customized eCommerce solution for the online sale of spare parts for cars and motorcycles, designed to ensure ease of use and scalability."
+            },
+            "sections": [
+                {
+                    "title": "Project Description",
+                    "content": [
+                        "This eCommerce platform has been developed to enable the online sale of <strong>car and motorcycle spare parts</strong>, offering a simple and clear user experience. The platform is built to manage a wide and diverse product catalog, with a focus on <strong>smooth navigation</strong> and ease of use on both desktop and mobile devices.",
+                        "The platform does not use APIs, but offers centralized management of products and orders directly from the control panel. Thanks to mobile optimization, users can easily browse and purchase spare parts from anywhere.",
+                        "The solution is designed to support business growth, allowing for simplified management of a large product inventory and ensuring a reliable system for secure online transactions."
+                    ]
+                },
+                {
+                    "title": "Objectives and Main Features",
+                    "content": [
+                        "The goal of the project is to provide a comprehensive and flexible eCommerce platform for the sale of spare parts, aimed at both individuals and professionals. Here are the main features:",
+                        "1. <strong>Extended Product Catalog</strong>: The platform allows the management of a vast inventory of car and motorcycle spare parts, enabling customers to easily find the products they need.",
+                        "2. <strong>Mobile Optimization</strong>: The platform is designed to provide smooth navigation on smartphones and tablets, ensuring a seamless shopping experience on any device.",
+                        "3. <strong>Efficient Order Management</strong>: The order management system allows tracking the entire order lifecycle, from product selection to delivery, ensuring a clear and smooth sales process.",
+                        "4. <strong>Secure Transactions</strong>: The platform supports secure payment systems to ensure the protection of users' sensitive data during the purchasing process."
+                    ]
+                },
+                {
+                    "title": "Project Rationale",
+                    "content": [
+                        "The project was initiated to respond to the growing demand for a platform specialized in the sale of spare parts for cars and motorcycles, a market that requires a highly performant system capable of handling a large number of products and orders.",
+                        "The decision not to use APIs is related to the need to keep the system simple and easy to manage, focusing on centralized and direct data management, which makes the platform more immediate and easier to maintain in the long term. The ability to offer a mobile-optimized platform with secure transactions was one of the key priorities to improve the customer experience."
+                    ]
+                },
+                {
+                    "title": "Technologies Used",
+                    "techCategories": [
+                        {
+                            "title": "Frontend",
+                            "technologies": [
+                                "HTML",
+                                "CSS",
+                                "Bootstrap",
+                                "JavaScript",
+                                "jQuery"
+                            ]
+                        },
+                        {
+                            "title": "Backend & Database",
+                            "technologies": [
+                                "Laravel (PHP)",
+                                "MySQL"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "crm_web",
+            "title": "Scalable Web CRM",
+            "meta": {
+                "description": "A <strong>scalable web CRM for customer management</strong> designed to improve the management of business sales, integrating contact management, marketing automation, and advanced reporting functionalities.",
+                "keywords": "scalable web CRM, customer management for businesses, marketing automation for CRM, customized CRM software for sales, sales management with reporting",
+                "author": "Damiano Gazzino"
+            },
+            "header": {
+                "h1": "Web CRM: Scalable Design for Customer Management",
+                "p": "A web CRM designed to manage contacts, leads, and sales automation, ensuring flexibility and scalability for businesses."
+            },
+            "sections": [
+                {
+                    "title": "Project Description",
+                    "content": [
+                        "This project involves the development of a <strong>scalable web CRM</strong>, aimed at optimizing customer and sales opportunity management within businesses. The system offers effective tools for <strong>centralized contact management</strong>, facilitating access to customer data and improving the sales management process.",
+                        "Thanks to modular and scalable design, the CRM can grow alongside businesses, allowing for the integration of additional functionalities such as sales automation and advanced reporting.",
+                        "The CRM is designed to enhance customer relationship management by streamlining internal processes and ensuring greater efficiency in business activities."
+                    ]
+                },
+                {
+                    "title": "Objectives and Main Features",
+                    "content": [
+                        "The project aims to provide a flexible and scalable CRM solution with a particular focus on efficiency in customer management. The main features include:",
+                        "1. <strong>Centralized Contact Management</strong>: The CRM allows businesses to manage contacts in an organized manner, ensuring quick and comprehensive access to essential customer data.",
+                        "2. <strong>Sales Activity Automation</strong>: The system enables the automated management of sales activities, improving process effectiveness and optimizing workflow.",
+                        "3. <strong>Advanced Reporting</strong>: The CRM includes tools to generate detailed reports, allowing businesses to track sales, analyze results, and make informed strategic decisions."
+                    ]
+                },
+                {
+                    "title": "Project Rationale",
+                    "content": [
+                        "The project was initiated to address the need for businesses to have a scalable tool for managing customer relationships. The main goal was to develop a platform that could be extended with advanced features, such as sales automation and detailed reporting.",
+                        "In addition, the aim was to make contact management smoother, optimizing the sales process and ensuring better internal organization. The project focused on simplicity and efficiency, while also allowing the system to scale as business needs grow."
+                    ]
+                },
+                {
+                    "title": "Technologies Used",
+                    "techCategories": [
+                        {
+                            "title": "Frontend",
+                            "technologies": [
+                                "HTML",
+                                "CSS",
+                                "Bootstrap",
+                                "JavaScript",
+                                "jQuery"
+                            ]
+                        },
+                        {
+                            "title": "Backend & Database",
+                            "technologies": [
+                                "PHP",
+                                "API (PHP)",
+                                "MySQL"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "gestionale_web",
+            "title": "Web Management System for the Tesserete Pistol Club",
+            "meta": {
+                "description": "A <strong>custom web management system for the Tesserete Pistol Club</strong>, designed to manage members, licenses, invoicing, and statistics. Optimized to ensure efficient management and scalability for sports clubs.",
+                "keywords": "web management system Tesserete Pistol Club, software for managing members and licenses, invoicing management for sports clubs, custom software for shooting clubs",
+                "author": "Damiano Gazzino"
+            },
+            "header": {
+                "h1": "Tesserete Pistol Club Management System",
+                "p": "Development project of a <strong>web management system for the Tesserete Pistol Club</strong>, with advanced features for managing members, licenses, and invoicing."
+            },
+            "sections": [
+                {
+                    "title": "Project Description",
+                    "content": [
+                        "The <strong>web management system for the Tesserete Pistol Club</strong> is designed to simplify the management of the club's daily activities. Key features include managing members, tracking licenses, and automating invoicing, saving time and minimizing administrative errors.",
+                        "Additionally, the system offers advanced tools for generating detailed statistics, providing a clear view of the club's performance. With customizable reports, the system can be perfectly tailored to meet the specific needs of the Tesserete Pistol Club.",
+                        "The platform is scalable, ensuring that the system can evolve easily to meet the future needs of the club, supporting continuous growth without compromising performance."
+                    ]
+                },
+                {
+                    "title": "Objectives and Main Features",
+                    "content": [
+                        "The main goal of the project is to provide the <strong>Tesserete Pistol Club</strong> with a <strong>comprehensive and scalable management system</strong>, with the following features:",
+                        "1. <strong>Member Management</strong>: A centralized system that allows the club to easily track member data, including personal information and activity history.",
+                        "2. <strong>License Tracking</strong>: Complete management of member licenses, with alerts and reports to ensure all licenses are valid and up-to-date.",
+                        "3. <strong>Invoicing Automation</strong>: An automated invoicing system to simplify the management of annual fees, purchases, and additional services.",
+                        "4. <strong>Advanced Statistics and Custom Reports</strong>: Automatic generation of reports and performance analysis for strategic management of the club's activities and resources."
+                    ]
+                },
+                {
+                    "title": "Project Rationale",
+                    "content": [
+                        "The project was conceived to address the specific needs of the <strong>Tesserete Pistol Club</strong>, which required a software solution to centralize and optimize the management of its internal activities. In particular, the goal was to improve efficiency in managing members and licenses, reduce administrative burden, and increase accuracy in daily operations.",
+                        "Additionally, the choice to make the system scalable allowed for the creation of a platform that can grow with the club, adapting to new needs that may arise over time."
+                    ]
+                },
+                {
+                    "title": "Technologies Used",
+                    "techCategories": [
+                        {
+                            "title": "Frontend",
+                            "technologies": [
+                                "HTML",
+                                "CSS",
+                                "Bootstrap",
+                                "JavaScript",
+                                "jQuery"
+                            ]
+                        },
+                        {
+                            "title": "Backend & Database",
+                            "technologies": [
+                                "Laravel (PHP)",
+                                "MySQL"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }        
+        
+    ]
+}

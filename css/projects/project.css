@@ -11,11 +11,11 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(to bottom, #040404, #183a4e, #0c0c0c)!important;
+    background: linear-gradient(to bottom, #040404, #183a4e, #0c0c0c) !important;
     /* Gradiente dal grigio scuro al blu scurissimo e ritorno al grigio scuro */
     padding: 40px 20px;
     text-align: center;
-    height: 450px;
+    height: calc(80vh);
     margin: 50px 0 0 0;
     /* Altezza aumentata per dare più respiro */
 }
@@ -91,16 +91,15 @@ body {
 }
 
 
+.row{
+    width: 70%;
+}
 .section {
     border-radius: 10px;
     padding: 15px;
-    margin-bottom: 20px;
+    margin: 40px 0;
 }
 
-.section {
-    margin: 40px 0;
-    /* Spaziatura verticale */
-}
 
 /* Sezione delle tecnologie */
 .tech-section {
@@ -151,18 +150,36 @@ body {
 }
 
 @media (max-width: 768px) {
-    .content-description {
-        flex: 1 1 100%;
-        /* Disposizione a una colonna per schermi piccoli */
+
+    .row{
+        width: 95%;
     }
 
-    .section{
-        padding: 0!important;
+    .content-description {
+        width: 100%; /* Occupa tutta la larghezza */
+        background-color: #f0f0f0; /* Colore di sfondo */
+        padding: 20px; /* Spazi interni */
+        box-sizing: border-box; /* Include il padding nelle dimensioni */
+        overflow: hidden; /* Nasconde eventuali overflow */
+        min-height: 200px!important;
+    }
+    
+    .content-description p {
+        margin: 0 0 15px 0; /* Margine inferiore per separare i paragrafi */
+        line-height: 1.6; /* Migliora la leggibilità */
+    }
+    
+    .section {
+        padding: 0 !important;
+
+    }
+
+    .tech-section{
+        display: inline!important;
     }
 }
 
-.tech-list li,
-.content-description {
+.tech-list li {
     font-size: 1.1em;
     color: #d1d1d1;
     /* Colore più chiaro per il testo */
@@ -172,17 +189,14 @@ body {
     transition: color 0.3s ease;
 }
 
-.content-description {
-    /* Evita che il contenuto venga visualizzato come blocchi separati */
-    display: inline; /* O usa display: inline-block; se necessario */
-    padding: 24px;
-}
 
 .content-description div {
-    margin-bottom: 16px; /* Imposta il margine inferiore tra i paragrafi */
+    margin-bottom: 16px;
+    /* Imposta il margine inferiore tra i paragrafi */
 }
 
 /* Opzionale: Se vuoi anche un margine superiore */
 .content-description div:first-child {
-    margin-top: 0; /* Rimuovi il margine superiore dal primo paragrafo */
+    margin-top: 0;
+    /* Rimuovi il margine superiore dal primo paragrafo */
 }

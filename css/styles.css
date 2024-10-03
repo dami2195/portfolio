@@ -18,19 +18,6 @@ header {
     width: 100%;
 }
 
-/*header::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 0;
-}*/
-
-
-
-
 .header-content {
     width: 80%;
     height: 100%;
@@ -44,8 +31,8 @@ header {
 .content-img {
     border-radius: 50%;
     /* Applica il border-radius solo al contenitore */
-    border: 6px solid var(--text-color);
-    box-shadow: 0 0 60px var(--text-color);
+    border: 6px solid var(--text-color)!important;
+    box-shadow: 0 0 60px var(--text-color)!important;
     position: relative;
     overflow: hidden;
     height: 300px;
@@ -54,6 +41,7 @@ header {
     margin: auto 0;
     padding: 0;
 }
+
 
 .profile-img {
     max-width: 300px;
@@ -64,15 +52,10 @@ header {
 
 .content {
     display: flex;
-    /* Imposta il contenitore come flex */
     align-items: center;
-    /* Centra verticalmente gli elementi */
     justify-content: center;
-    /* Centra orizzontalmente gli elementi */
     height: 100%;
-    /* Assicurati che il contenitore abbia un'altezza definita */
     margin: 0 auto;
-    /* Margine automatico per il contenitore */
 }
 
 .center-box {
@@ -96,7 +79,6 @@ header {
     /* Allinea il testo al centro */
     padding: 0 0 0 36px;
 }
-
 
 .center-box:before {
     right: 0;
@@ -140,13 +122,15 @@ header {
     margin: 5px 0px 20px 0px;
 }
 
-
 /*Container*/
 .container {
     margin: 0 0 24px 0;
-    width: 100%;
 }
 
+.row{
+    margin: 0 auto;
+    width: 80%;
+}
 .content-description {
     flex: 1 1 45%;
     background: linear-gradient(135deg, #1a1a1a, #262626);
@@ -155,18 +139,15 @@ header {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     transform: translateY(-8px);
     box-shadow: 0 8px 30px rgba(0, 153, 255, 0.3);
-    display: flex;
     flex-direction: column;
     color: white;
-    font-size: 1.40rem;
-    max-height: 525px;
+    font-size: 1.65rem;
     margin-bottom: 12px;
 }
 
-
 .content-container {
     justify-content: space-between;
-    width: 70%;
+    width: 90%;
     margin: 0 auto;
 }
 
@@ -181,52 +162,31 @@ header {
 .content-container p {
     margin: 0 0 18px 0;
 }
-.card-header {
-    display: flex;
-}
 
-.projects {
-    margin: 64px 0 0 0;
-}
+
 
 .project-image {
     max-width: 100%;
     /* L'immagine si adatta al contenitore */
-    height: auto;
+    min-height: 200px;
+    max-height: 300px;
     /* Mantiene le proporzioni */
     border-radius: 0.5rem;
     margin: 0 auto;
 }
 
-.card {
-    min-height: 330px;
-    /* Imposta un'altezza fissa per le schede */
-    overflow: hidden;
-    /* Nasconde il contenuto che esce dalla scheda */
-    transition: transform 0.3s;
-    /* Aggiungi un effetto di transizione */
-}
-
-.card-body{
-    height: 150px!important;
+.card{
+    min-height: 400px;
 }
 .card-title {
     color: #a0d3e8;
     /* Colore del titolo */
 }
 
-.btn-primary {
-    background-color: #112d3f;
-    /* Colore del pulsante */
-    border: none;
-    /* Rimuovi il bordo */
-}
-
 .btn-primary:hover {
     background-color: #84bde1;
     /* Colore del pulsante al passaggio del mouse */
 }
-
 
 /*Footer*/
 .footer {
@@ -235,12 +195,12 @@ header {
     padding: 20px;
     text-align: center;
 }
-
 @media (max-width: 768px) {
     header {
         height: calc(70vh);
 
     }
+
 
     .content {
         flex-direction: column;
@@ -255,9 +215,6 @@ header {
         /* Riduci la larghezza massima per schermi piccoli */
     }
 
-    .project-image {
-        height: 180 !important;
-    }
 
     .center-box {
         width: 100%;
@@ -266,27 +223,16 @@ header {
         margin: 0 0 48px 0;
     }
 
-    .content-container {
-        width: 90%;
-    }
-
-    .card {
-        height: 100px!important;
-    }
-
     .row{
         margin: 0 auto;
-        width: 100%;
+        width: 95%;
     }
-    .content-description {
-        margin: 0 auto;
-        height: auto;
-        max-height: 100%;
-        width: 98%;
+
+    .card{
+        min-height: 400px;
     }
 }
 
-/* CSS Animazioni */
 .fade-in-up,
 .fade-in-left,
 .zoom-in,
