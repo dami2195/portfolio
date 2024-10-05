@@ -27,7 +27,14 @@ $(window).on('load', function () {
             // Caricamento progetti
             $(".projects h2").text(lang.projects.title);
             const projectsContainer = $(".tech-section");
+
+            var counter = -1;
+
             lang.projects.items.forEach(item => {
+                ++counter;
+                if(counter % 2 == 0 && counter < lang.projects.items.length)
+                    projectsContainer.append("<div class='col-sm-12'>");
+
                 projectsContainer.append(`
                     <div class="col-md-6 content-description fade-in-left">
                         <div class="card">
@@ -42,6 +49,9 @@ $(window).on('load', function () {
                         </div>
                     </div>
                 `);
+
+                if(counter % 2 == 0)
+                    projectsContainer.append("</div>");
             });
 
             $("#footer-text").html(lang.footer.text);

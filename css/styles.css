@@ -142,7 +142,8 @@ header {
     flex-direction: column;
     color: white;
     font-size: 1.65rem;
-    margin-bottom: 12px;
+    min-height: 500px;
+    height: 100%;
 }
 
 .content-container {
@@ -168,7 +169,7 @@ header {
 .project-image {
     max-width: 100%;
     /* L'immagine si adatta al contenitore */
-    min-height: 200px;
+    min-height: 225px;
     max-height: 300px;
     /* Mantiene le proporzioni */
     border-radius: 0.5rem;
@@ -177,6 +178,11 @@ header {
 
 .card{
     min-height: 400px;
+    height: 100%!important;
+}
+
+.card-header{
+    display: flex;
 }
 .card-title {
     color: #a0d3e8;
@@ -194,43 +200,6 @@ header {
     margin-top: 40px;
     padding: 20px;
     text-align: center;
-}
-@media (max-width: 768px) {
-    header {
-        height: calc(70vh);
-
-    }
-
-
-    .content {
-        flex-direction: column;
-        /* Mantieni la direzione colonna per piccoli schermi */
-    }
-
-    .content-img {
-        margin: 48px 0;
-        max-height: 250px;
-        /* Riduci l'altezza massima per schermi piccoli */
-        max-width: 250px;
-        /* Riduci la larghezza massima per schermi piccoli */
-    }
-
-
-    .center-box {
-        width: 100%;
-        padding: 1rem;
-        /* Aggiungi padding per contenuto più piccolo */
-        margin: 0 0 48px 0;
-    }
-
-    .row{
-        margin: 0 auto;
-        width: 95%;
-    }
-
-    .card{
-        min-height: 400px;
-    }
 }
 
 .fade-in-up,
@@ -269,3 +238,55 @@ header {
     opacity: 1;
     transform: translateY(0);
 }
+
+@media (max-width: 768px) {
+    header {
+        height: calc(70vh);
+
+    }
+
+
+    .content {
+        flex-direction: column;
+        /* Mantieni la direzione colonna per piccoli schermi */
+    }
+
+    .content-img {
+        margin: 48px 0;
+        max-height: 250px;
+        /* Riduci l'altezza massima per schermi piccoli */
+        max-width: 250px;
+        /* Riduci la larghezza massima per schermi piccoli */
+    }
+
+
+    .center-box {
+        width: 100%;
+        padding: 1rem;
+        /* Aggiungi padding per contenuto più piccolo */
+        margin: 0 0 48px 0;
+    }
+
+    .row{
+        margin: 0 auto;
+        width: 95%;
+    }
+
+    .card{
+        min-height: 400px;
+    }
+}
+
+@media (max-width: 576px) {
+
+    .project-image {
+        min-width: 210px;
+        max-width: 100%!important;
+        height: auto!important;
+        min-height: 0;
+        /* Mantiene le proporzioni */
+        border-radius: 0.5rem;
+        margin: 0 auto;
+    }
+}
+

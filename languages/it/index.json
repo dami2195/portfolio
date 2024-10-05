@@ -24,18 +24,18 @@
                 "link": "./detail.html?id=gestionale_web"
             },
             {
-                "name": "CRM Web",
-                "description": "Un <strong>CRM web scalabile</strong> sviluppato con un'architettura API-first per una gestione efficiente di contatti, lead e opportunità di vendita. Progettato per ottimizzare i flussi di lavoro aziendali grazie a <strong>microservizi</strong> e integrazioni seamless.",
-                "image":"crm.png",
-                "button" : "Scopri di più",
-                "link": "./detail.html?id=crm_web"
-            },
-            {
                 "name": "Piattaforma E-Commerce",
                 "description": "Sviluppo di una <strong>piattaforma e-commerce personalizzata</strong>, ottimizzata per garantire una <strong>esperienza utente fluida</strong> e prestazioni elevate su tutti i dispositivi. Progettata con API RESTful per una gestione scalabile di prodotti e ordini.",
                 "image":"shopcar.png",
                 "button" : "Scopri di più",
                 "link": "./detail.html?id=ecommerce"
+            },
+            {
+                "name": "CRM Web",
+                "description": "Un <strong>CRM web scalabile</strong> sviluppato con un'architettura API-first per una gestione efficiente di contatti, lead e opportunità di vendita. Progettato per ottimizzare i flussi di lavoro aziendali grazie a <strong>microservizi</strong> e integrazioni seamless.",
+                "image":"crm.png",
+                "button" : "Scopri di più",
+                "link": "./detail.html?id=crm_web"
             },
             {
                 "name": "Tester API",

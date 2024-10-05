@@ -24,18 +24,18 @@
                 "image":"gestionale.png"
             },
             {
-                "name": "Web CRM",
-                "description": "A scalable and modern CRM system, designed with an API-first architecture to ensure efficient data synchronization through microservices.",
-                "image":"crm.png",
-                "button" : "Find out more",
-                "link": "./detail.html?lang=en&id=crm_web"
-            },
-            {
                 "name": "E-Commerce Platform",
                 "description": "Development of an innovative e-commerce platform designed to provide a seamless user experience and superior performance on any device.",
                 "image":"shopcar.png",
                 "button" : "Find out more",
                 "link": "./detail.html?lang=en&id=ecommerce"
+            },
+            {
+                "name": "Web CRM",
+                "description": "A scalable and modern CRM system, designed with an API-first architecture to ensure efficient data synchronization through microservices.",
+                "image":"crm.png",
+                "button" : "Find out more",
+                "link": "./detail.html?lang=en&id=crm_web"
             },
             {
                 "name": "API Tester",

@@ -56,64 +56,6 @@
             ]
         },
         {
-            "id": "tester_api",
-            "title": "Tester API",
-            "meta": {
-                "description": "Uno <strong>strumento avanzato per sviluppatori di API</strong>, progettato per ottimizzare il processo di test delle interfacce. Comprende sia <strong>test automatizzati che manuali</strong>, con un'interfaccia semplice e intuitiva. Questo tool aumenta l'efficienza del team di sviluppo, migliorando la qualità del codice.",
-                "keywords": "strumento di testing API per sviluppatori, test API automatizzati, gestione API per test manuali, software per sviluppatori di API, tool per testare API, interfaccia intuitiva per tester API, report dettagliati per test API, debugging API semplificato",
-                "author": "Damiano Gazzino"
-            },
-            "header": {
-                "h1": "Tester API: Strumento Completo per Sviluppatori di API",
-                "p": "Una soluzione moderna per ottimizzare <strong>la validazione e il monitoraggio delle API</strong> durante lo sviluppo software. Offre funzionalità avanzate per test automatizzati e manuali, supportando molteplici protocolli e formati."
-            },
-            "sections": [
-                {
-                    "title": "Descrizione del Progetto",
-                    "content": [
-                        "Il <strong>software di testing API</strong> è stato sviluppato per migliorare l'efficienza degli sviluppatori, fornendo strumenti che permettono di eseguire test sia automatizzati che manuali in modo rapido e preciso. Grazie a questo strumento, è possibile verificare il corretto funzionamento delle API durante tutte le fasi di sviluppo.",
-                        "L'interfaccia user-friendly rende l'interazione con lo strumento intuitiva, permettendo di diagnosticare errori e anomalie in modo più semplice. Supportando vari protocolli e formati, il software si integra perfettamente in diversi contesti di sviluppo.",
-                        "Inoltre, la generazione di report dettagliati sui test facilita l'identificazione rapida dei problemi, contribuendo a ottimizzare le applicazioni e a ridurre il tempo speso nel debugging."
-                    ]
-                },
-                {
-                    "title": "Obiettivi e Funzionalità Principali",
-                    "content": [
-                        "L'obiettivo principale di questo progetto è fornire un tool versatile e performante per i team di sviluppo, migliorando la qualità delle API attraverso un processo di testing completo. Ecco le funzionalità chiave:",
-                        "1. <strong>Test automatizzati delle API</strong>: Permette di creare ed eseguire test su larga scala senza l'intervento manuale, garantendo una verifica continua durante l'intero ciclo di sviluppo. I test sono compatibili con vari protocolli, rendendo il software adatto a un'ampia gamma di utilizzi.",
-                        "2. <strong>Test manuali personalizzati</strong>: In caso di necessità di approfondimenti specifici, il sistema consente l'esecuzione di test manuali mirati, offrendo agli sviluppatori una flessibilità totale nella verifica del comportamento delle API.",
-                        "3. <strong>Interfaccia intuitiva</strong>: Progettata per rendere più agevole l'interazione con il tool, l'interfaccia è pensata per essere usata senza difficoltà, anche dai meno esperti, consentendo una gestione fluida delle varie funzionalità.",
-                        "4. <strong>Report dettagliati</strong>: Ogni test eseguito genera un report dettagliato che consente di analizzare rapidamente eventuali errori o malfunzionamenti, accelerando il processo di debugging e miglioramento del software."
-                    ]
-                },
-                {
-                    "title": "Motivazioni del Progetto",
-                    "content": [
-                        "Il progetto è nato dall’esigenza di fornire un'alternativa efficiente ai metodi tradizionali di testing delle API. Con l'aumento della complessità e dell'interconnessione delle moderne applicazioni, diventava fondamentale disporre di uno strumento che permettesse di verificare l'integrità delle API in modo rapido e preciso.",
-                        "La visione alla base di questo software era quella di creare una piattaforma che facilitasse il lavoro quotidiano degli sviluppatori, offrendo uno strumento capace di automatizzare il testing e di supportare una gestione manuale per i casi più complessi, tutto in un ambiente facile da usare."
-                    ]
-                },
-                {
-                    "title": "Tecnologie Utilizzate",
-                    "techCategories": [
-                        {
-                            "title": "Frontend",
-                            "technologies": [
-                                "WPF (Windows Presentation Foundation)"
-                            ]
-                        },
-                        {
-                            "title": "Backend & Database",
-                            "technologies": [
-                                "C#",
-                                "SQLite"
-                            ]
-                        }
-                    ]
-                }
-            ]
-        },
-        {
             "id": "ecommerce",
             "title": "Piattaforma E-Commerce per Ricambi Auto e Moto",
             "meta": {
@@ -176,6 +118,65 @@
             ]
         },
         {
+            "id": "tester_api",
+            "title": "Tester API",
+            "meta": {
+                "description": "Uno <strong>strumento avanzato per sviluppatori di API</strong>, progettato per ottimizzare il processo di test delle interfacce. Comprende sia <strong>test automatizzati che manuali</strong>, con un'interfaccia semplice e intuitiva. Questo tool aumenta l'efficienza del team di sviluppo, migliorando la qualità del codice.",
+                "keywords": "strumento di testing API per sviluppatori, test API automatizzati, gestione API per test manuali, software per sviluppatori di API, tool per testare API, interfaccia intuitiva per tester API, report dettagliati per test API, debugging API semplificato",
+                "author": "Damiano Gazzino"
+            },
+            "header": {
+                "h1": "Tester API: Strumento Completo per Sviluppatori di API",
+                "p": "Una soluzione moderna per ottimizzare <strong>la validazione e il monitoraggio delle API</strong> durante lo sviluppo software. Offre funzionalità avanzate per test automatizzati e manuali, supportando molteplici protocolli e formati."
+            },
+            "sections": [
+                {
+                    "title": "Descrizione del Progetto",
+                    "content": [
+                        "Il <strong>software di testing API</strong> è stato sviluppato per migliorare l'efficienza degli sviluppatori, fornendo strumenti che permettono di eseguire test sia automatizzati che manuali in modo rapido e preciso. Grazie a questo strumento, è possibile verificare il corretto funzionamento delle API durante tutte le fasi di sviluppo.",
+                        "L'interfaccia user-friendly rende l'interazione con lo strumento intuitiva, permettendo di diagnosticare errori e anomalie in modo più semplice. Supportando vari protocolli e formati, il software si integra perfettamente in diversi contesti di sviluppo.",
+                        "Inoltre, la generazione di report dettagliati sui test facilita l'identificazione rapida dei problemi, contribuendo a ottimizzare le applicazioni e a ridurre il tempo speso nel debugging."
+                    ]
+                },
+                {
+                    "title": "Obiettivi e Funzionalità Principali",
+                    "content": [
+                        "L'obiettivo principale di questo progetto è fornire un tool versatile e performante per i team di sviluppo, migliorando la qualità delle API attraverso un processo di testing completo. Ecco le funzionalità chiave:",
+                        "1. <strong>Test automatizzati delle API</strong>: Permette di creare ed eseguire test su larga scala senza l'intervento manuale, garantendo una verifica continua durante l'intero ciclo di sviluppo. I test sono compatibili con vari protocolli, rendendo il software adatto a un'ampia gamma di utilizzi.",
+                        "2. <strong>Test manuali personalizzati</strong>: In caso di necessità di approfondimenti specifici, il sistema consente l'esecuzione di test manuali mirati, offrendo agli sviluppatori una flessibilità totale nella verifica del comportamento delle API.",
+                        "3. <strong>Interfaccia intuitiva</strong>: Progettata per rendere più agevole l'interazione con il tool, l'interfaccia è pensata per essere usata senza difficoltà, anche dai meno esperti, consentendo una gestione fluida delle varie funzionalità.",
+                        "4. <strong>Report dettagliati</strong>: Ogni test eseguito genera un report dettagliato che consente di analizzare rapidamente eventuali errori o malfunzionamenti, accelerando il processo di debugging e miglioramento del software."
+                    ]
+                },
+                {
+                    "title": "Motivazioni del Progetto",
+                    "content": [
+                        "Il progetto è nato dall’esigenza di fornire un'alternativa efficiente ai metodi tradizionali di testing delle API. Con l'aumento della complessità e dell'interconnessione delle moderne applicazioni, diventava fondamentale disporre di uno strumento che permettesse di verificare l'integrità delle API in modo rapido e preciso.",
+                        "La visione alla base di questo software era quella di creare una piattaforma che facilitasse il lavoro quotidiano degli sviluppatori, offrendo uno strumento capace di automatizzare il testing e di supportare una gestione manuale per i casi più complessi, tutto in un ambiente facile da usare."
+                    ]
+                },
+                {
+                    "title": "Tecnologie Utilizzate",
+                    "techCategories": [
+                        {
+                            "title": "Frontend",
+                            "technologies": [
+                                "WPF (Windows Presentation Foundation)"
+                            ]
+                        },
+                        {
+                            "title": "Backend & Database",
+                            "technologies": [
+                                "C#",
+                                "SQLite"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        
+        {
             "id": "crm_web",
             "title": "CRM Web Scalabile",
             "meta": {
@@ -236,9 +237,7 @@
                     ]
                 }
             ]
-        }
-                        
-        ,
+        },
         {
             "id": "gestionale_web",
             "title": "Gestionale Web per Club Pistola di Tesserete",
