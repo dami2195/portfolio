@@ -142,8 +142,10 @@ header {
     flex-direction: column;
     color: white;
     font-size: 1.65rem;
-    min-height: 500px;
+    min-height: 300px;
     height: 100%;
+    margin: 12px 0 0 0;
+
 }
 
 .content-container {
@@ -239,10 +241,11 @@ header {
     transform: translateY(0);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 992px)
+{
     header {
         height: calc(70vh);
-
+        margin: 0 0 48px 0;
     }
 
 
@@ -250,7 +253,6 @@ header {
         flex-direction: column;
         /* Mantieni la direzione colonna per piccoli schermi */
     }
-
     .content-img {
         margin: 48px 0;
         max-height: 250px;
@@ -258,6 +260,15 @@ header {
         max-width: 250px;
         /* Riduci la larghezza massima per schermi piccoli */
     }
+
+    #projects{
+        margin: 48px 0 0 0;
+    }
+}
+@media (max-width: 768px) {
+    
+
+    
 
 
     .center-box {
