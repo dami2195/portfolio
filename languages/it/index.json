@@ -25,7 +25,7 @@
             },
             {
                 "name": "Piattaforma E-Commerce",
-                "description": "Sviluppo di una <strong>piattaforma e-commerce personalizzata</strong>, ottimizzata per garantire una <strong>esperienza utente fluida</strong> e prestazioni elevate su tutti i dispositivi. Progettata con API RESTful per una gestione scalabile di prodotti e ordini.",
+                "description": "Sviluppo di una <strong>piattaforma e-commerce personalizzata</strong>, ottimizzata per garantire una <strong>esperienza utente fluida</strong> e prestazioni elevate su tutti i dispositivi.",
                 "image":"shopcar.png",
                 "button" : "Scopri di più",
                 "link": "./detail.html?id=ecommerce"
