@@ -18,7 +18,7 @@
         "items": [
             {
                 "name": "Gestionale Web Club Pistola Tesserete",
-                "description": "Un <strong>gestionare web personalizzato per club di tiro</strong>, progettato per gestire soci, licenze, fatturazioni e statistiche in modo efficiente. Il sistema offre funzionalità avanzate per l'<strong>amministrazione del club</strong>, con interfaccia user-friendly.",
+                "description": "Un <strong>gestionale web personalizzato per club di tiro</strong>, progettato per gestire soci, licenze, fatturazioni e statistiche in modo efficiente. Il sistema offre funzionalità avanzate per l'<strong>amministrazione del club</strong>, con interfaccia user-friendly.",
                 "image":"gestionale.png",
                 "button" : "Scopri di più",
                 "link": "./detail.html?id=gestionale_web"
