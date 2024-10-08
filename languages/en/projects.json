@@ -5,11 +5,11 @@
             "title": "Financial Accounting Software",
             "meta": {
                 "description": "A project to develop a <strong>custom business accounting software</strong>, aimed at simplifying <strong>business finance management</strong> and improving the accuracy of <strong>financial reporting for small and medium enterprises</strong>.",
-                "keywords": "custom business accounting software, business finance management, financial reporting, business expense tracking, accounting tools for SMEs",
+                "keywords": "accounting software, custom business accounting software, business finance management, financial reporting, business expense tracking, accounting tools for SMEs",
                 "author": "Damiano Gazzino"
             },
             "header": {
-                "h1": "Financial Accounting Management for Businesses",
+                "h1": "Financial Accounting Management",
                 "p": "A personal project to enhance skills in <strong>accounting and financial management for businesses</strong>."
             },
             "sections": [
@@ -115,7 +115,7 @@
         },        
         {
             "id": "ecommerce",
-            "title": "E-Commerce Platform for Car and Motorcycle Spare Parts",
+            "title": "E-Commerce Platform",
             "meta": {
                 "description": "Development project of a <strong>scalable eCommerce platform for the sale of car and motorcycle spare parts</strong>, optimized to ensure high performance on both mobile and desktop devices, and to offer a simple and intuitive user experience.",
                 "keywords": "eCommerce platform for car spare parts, online motorcycle parts sales, platform for car and motorcycle spare parts stores, automotive eCommerce platform, spare parts eCommerce scalability",
@@ -177,7 +177,7 @@
         },
         {
             "id": "crm_web",
-            "title": "Scalable Web CRM",
+            "title": "Web CRM",
             "meta": {
                 "description": "A <strong>scalable web CRM for customer management</strong> designed to improve the management of business sales, integrating contact management, marketing automation, and advanced reporting functionalities.",
                 "keywords": "scalable web CRM, customer management for businesses, marketing automation for CRM, customized CRM software for sales, sales management with reporting",

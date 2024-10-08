@@ -5,18 +5,18 @@
             "title": "Software di Contabilità Finanziaria",
             "meta": {
                 "description": "Progetto di sviluppo software per la creazione di un <strong>software di contabilità aziendale personalizzato</strong>, mirato a semplificare la <strong>gestione delle finanze aziendali</strong> e migliorare l'accuratezza della <strong>reportistica finanziaria per le piccole e medie imprese</strong>.",
-                "keywords": "software di contabilità aziendale personalizzato, gestione finanze aziendali, reportistica finanziaria, monitoraggio spese aziendali, strumenti di contabilità per PMI",
+                "keywords": "software di contabilità, software contabile, software di contabilità aziendale personalizzato, gestione finanze aziendali, reportistica finanziaria, monitoraggio spese aziendali, strumenti di contabilità per PMI",
                 "author": "Damiano Gazzino"
             },
             "header": {
-                "h1": "Gestione Contabilità Finanziaria per Aziende",
+                "h1": "Gestione Contabilità Finanziaria",
                 "p": "Un progetto personale per migliorare le competenze nella <strong>gestione contabile e finanziaria per aziende</strong>."
             },
             "sections": [
                 {
                     "title": "Descrizione del Progetto",
                     "content": [
-                        "Il <strong>Software di Contabilità Finanziaria</strong> è stato sviluppato come progetto personale per approfondire i concetti di <strong>gestione contabile</strong> e migliorare le competenze nel campo della <strong>pianificazione finanziaria</strong>. Il software mira a semplificare la <strong>registrazione dei movimenti contabili</strong>, fornendo uno strumento facile da usare per tenere sotto controllo le finanze, sia a livello aziendale che personale.",
+                        "Il <strong>Software di contabilità finanziaria</strong> è stato sviluppato come progetto personale per approfondire i concetti di <strong>gestione contabile</strong> e migliorare le competenze nel campo della <strong>pianificazione finanziaria</strong>. Il software mira a semplificare la <strong>registrazione dei movimenti contabili</strong>, fornendo uno strumento facile da usare per tenere sotto controllo le finanze, sia a livello aziendale che personale.",
                         "Una delle caratteristiche principali del software è la capacità di monitorare sia la <strong>situazione finanziaria attuale</strong> che quella <strong>futura</strong>. Grazie a grafici dinamici e intuitivi, l’utente può visualizzare chiaramente l'<strong>andamento delle finanze</strong>, ottenendo una previsione su come si evolveranno nel tempo. Questo permette di non solo monitorare con precisione le <strong>entrate</strong> e le <strong>spese</strong>, ma anche di pianificare strategie più efficaci in base agli scenari futuri."
                     ]
                 },
@@ -57,7 +57,7 @@
         },
         {
             "id": "ecommerce",
-            "title": "Piattaforma E-Commerce per Ricambi Auto e Moto",
+            "title": "Piattaforma E-Commerce",
             "meta": {
                 "description": "Progetto di sviluppo di una <strong>piattaforma eCommerce scalabile per la vendita di ricambi auto e moto</strong>, ottimizzata per garantire alte prestazioni su dispositivi mobili e desktop e per offrire un'esperienza utente semplice e intuitiva.",
                 "keywords": "piattaforma eCommerce per ricambi auto, vendita online pezzi moto, piattaforma per negozi di ricambi auto e moto, piattaforma eCommerce automotive, scalabilità eCommerce ricambi",
@@ -178,7 +178,7 @@
         
         {
             "id": "crm_web",
-            "title": "CRM Web Scalabile",
+            "title": "CRM Web",
             "meta": {
                 "description": "Un <strong>CRM web scalabile per la gestione clienti</strong> progettato per migliorare la gestione delle vendite aziendali, integrando funzionalità di gestione contatti, automazione marketing e reportistica avanzata.",
                 "keywords": "CRM web scalabile, gestione clienti per aziende, automazione marketing per CRM, software CRM personalizzato per vendite, gestione vendite con reportistica",
