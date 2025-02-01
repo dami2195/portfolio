@@ -3,8 +3,8 @@ Disallow: /prova/
 Disallow: /prova.html
 Allow: /
 Sitemap: https://damianogazzino.ch/sitemap.xml
-Disallow: projects/detail.html?id=gestionale_web
-Disallow: projects/detail.html?id=crm_web
-Disallow: projects/detail.html?id=ecommerce
-Disallow: projects/detail.html?id=tester_api
-Disallow: projects/detail.html?id=contabilita
+Disallow: /projects/detail.html?id=gestionale_web
+Disallow: /projects/detail.html?id=crm_web
+Disallow: /projects/detail.html?id=ecommerce
+Disallow: /projects/detail.html?id=tester_api
+Disallow: /projects/detail.html?id=contabilita
