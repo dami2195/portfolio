@@ -10,10 +10,20 @@ $(window).on('load', function () {
     const urlParams = new URLSearchParams(queryString);
     const parametro = urlParams.get('lang') || 'it'; // Default to Italian if not specified
     const path = `./languages/${parametro}/projects.json`;
-    console.log(parametro);
+
+    // Imposta l'URL canonico
+    const canonicalUrl = `${window.location.origin}${window.location.pathname}?lang=en${projectId ? `&id=${projectId}` : ''}`;
+    $('head').append(`<link rel="canonical" href="${canonicalUrl}" />`);
+    
+    // Aggiunta dei tag hreflang per la gestione delle lingue
+    const languages = ['it']; // Puoi aggiungere altre lingue
+    languages.forEach(l => {
+        const hrefLangUrl = `${window.location.origin}${window.location.pathname}?lang=${l}${projectId ? `&id=${projectId}` : ''}`;
+        $('head').append(`<link rel="alternate" hreflang="${l}" href="${hrefLangUrl}" />`);
+    });
+    
     $.getJSON(path)
         .done(function (projects) {
-            console.log("Dati JSON caricati:", projects);
             const projectData = projects.projects.find(p => p.id === projectId);
 
             if (!projectData) {
@@ -67,19 +77,8 @@ $(window).on('load', function () {
                 categoryHtml += '</ul></div>';
                 $("#tech-section").append(categoryHtml);
             });
-            // Popola la sezione delle tecnologie utilizzate, se esiste
-            if (projectData.sections.length > 1) {
-
-
-            } else {
-                $("#tech-section").append("<p>Nessuna tecnologia disponibile per questo progetto.</p>");
-            }
         })
         .fail(function (jqxhr, textStatus, error) {
             console.error("Errore nel caricamento del JSON:", textStatus, error);
         });
 })
-
-$(document).ready(function () {
-
-});
