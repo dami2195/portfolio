@@ -93,29 +93,29 @@
     </url>
 
     <url>
-    <loc>https://damianogazzino.ch/projects/detail.html?id=gestionale_web</loc>
-    <changefreq>never</changefreq>
-    <priority>0.1</priority>
-</url>
-<url>
-    <loc>https://damianogazzino.ch/projects/detail.html?id=crm_web</loc>
-    <changefreq>never</changefreq>
-    <priority>0.1</priority>
-</url>
-<url>
-    <loc>https://damianogazzino.ch/projects/detail.html?id=ecommerce</loc>
-    <changefreq>never</changefreq>
-    <priority>0.1</priority>
-</url>
-<url>
-    <loc>https://damianogazzino.ch/projects/detail.html?id=tester_api</loc>
-    <changefreq>never</changefreq>
-    <priority>0.1</priority>
-</url>
-<url>
-    <loc>https://damianogazzino.ch/projects/detail.html?id=contabilita</loc>
-    <changefreq>never</changefreq>
-    <priority>0.1</priority>
-</url>
+        <loc>https://damianogazzino.ch/projects/detail.html?id=gestionale_web</loc>
+        <changefreq>never</changefreq>
+        <priority>0.1</priority>
+    </url>
+    <url>
+        <loc>https://damianogazzino.ch/projects/detail.html?id=crm_web</loc>
+        <changefreq>never</changefreq>
+        <priority>0.1</priority>
+    </url>
+    <url>
+        <loc>https://damianogazzino.ch/projects/detail.html?id=ecommerce</loc>
+        <changefreq>never</changefreq>
+        <priority>0.1</priority>
+    </url>
+    <url>
+        <loc>https://damianogazzino.ch/projects/detail.html?id=tester_api</loc>
+        <changefreq>never</changefreq>
+        <priority>0.1</priority>
+    </url>
+    <url>
+        <loc>https://damianogazzino.ch/projects/detail.html?id=contabilita</loc>
+        <changefreq>never</changefreq>
+        <priority>0.1</priority>
+    </url>
 
 </urlset>
