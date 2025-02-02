@@ -20,8 +20,12 @@ $(window).on('load', function () {
     languages.forEach(l => {
         const hrefLangUrl = `${window.location.origin}${window.location.pathname}?lang=${l}${projectId ? `&id=${projectId}` : ''}`;
         $('head').append(`<link rel="alternate" hreflang="${l}" href="${hrefLangUrl}" />`);
+
+        const hrefUrl = `${window.location.origin}${window.location.pathname}?${projectId ? `&id=${projectId}` : ''}`;
+        $('head').append(`<link rel="alternate" href="${hrefUrl}" />`);
+
     });
-    
+
     $.getJSON(path)
         .done(function (projects) {
             const projectData = projects.projects.find(p => p.id === projectId);
