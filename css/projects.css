@@ -1,27 +1,186 @@
-.card {
-    min-width: 200px;
-    transition: transform 0.2s;
+:root {
+    --primary: #93c5fd;
+    --primary-light: #93c5fd;
+    --bg: #0a0a0a;
+    --text: #dbeafe;
+    --accent-bg: rgba(59, 130, 246, 0.08);
+    --bg-header: linear-gradient(to bottom, #040404, #0c0c0c);
 }
 
-.card:hover {
+header {
+    background: var(--bg-header) !important;
+    height: 450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* Centra verticalmente */
+    align-items: center;
+    /* Centra orizzontalmente */
+    text-align: center;
+    padding: 0 1rem;
+}
+
+section {
+    max-width: 960px;
+    margin: 4rem auto 1rem auto;
+    padding: 4rem;
+    background: linear-gradient(145deg, rgba(30, 58, 138, 0.06), rgba(59, 130, 246, 0.05));
+    border: 1px solid rgba(59, 130, 246, 0.15);
+    border-radius: 20px;
+    box-shadow: 0 0 40px rgba(59, 130, 246, 0.15);
+    backdrop-filter: blur(3px);
+}
+
+.project-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.6rem;
+    font-weight: 700;
+    text-align: center;
+    color: var(--primary-light);
+    text-shadow: 0 0 10px rgba(147, 197, 253, 0.4);
+}
+
+.project-subtitle {
+    text-align: center;
+    font-size: 1.1rem;
+    color: #93c5fd;
+    margin-bottom: 3rem;
+    letter-spacing: 0.05em;
+    opacity: 0.9;
+}
+
+.section-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 1.5rem;
+    border-bottom: 2px solid var(--primary);
+    padding-bottom: 0.4rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.project-content {
+    font-size: 1.1rem;
+}
+
+.project-content p {
+    margin-bottom: 1.5rem;
+    text-shadow: 0 0 6px rgba(203, 213, 225, 0.2);
+}
+
+.tech-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    margin: 1rem auto 3rem auto;
+    max-width: 900px;
+    justify-content: center;
+    padding: 1rem;
+    border-radius: 16px;
+}
+
+.tech-tags span {
+    background-color: var(--accent-bg);
+    color: var(--primary-light);
+    padding: 0.5rem 1rem;
+    border-radius: 30px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    transition: all 0.3s ease;
+    border: 1px solid transparent;
+    backdrop-filter: blur(2px);
+}
+
+.btn-primary {
+    display: inline-block;
+    background: transparent;
+    color: var(--primary);
+    border: 2px solid var(--primary);
+    padding: 0.7rem 2rem;
+    border-radius: 40px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    text-align: center;
+    cursor: pointer;
+}
+
+.btn-primary:hover {
+    background-color: var(--primary);
+    color: #fff;
+    box-shadow: 0 0 25px var(--primary);
+}
+
+.project-gallery {
+    width: 80%;
+    margin: 4rem auto 2rem auto;
+    padding: 2rem 4rem;
+    background: linear-gradient(145deg, rgba(30, 58, 138, 0.06), rgba(59, 130, 246, 0.05));
+    border: 1px solid rgba(59, 130, 246, 0.15);
+    border-radius: 20px;
+    box-shadow: 0 0 40px rgba(59, 130, 246, 0.15);
+    backdrop-filter: blur(3px);
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+}
+
+.gallery-grid img {
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+    cursor: zoom-in;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-grid img:hover {
     transform: scale(1.05);
+    box-shadow: 0 8px 25px rgba(59, 130, 246, 0.6);
 }
 
-.card-img-top {
-    object-fit: cover; /* Mantiene le proporzioni dell'immagine */
-    height: 200px; /* Altezza fissa per uniformare le card */
+.lightbox {
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.85);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: zoom-out;
+    z-index: 9999;
 }
 
-#projects{
-    margin: 0 auto;
+.lightbox img {
+    max-width: 90%;
+    max-height: 90vh;
+    box-shadow: 0 0 70px rgba(59, 130, 246, 0.25);
+    border-radius: 10px;
 }
 
-#projects h2{
-    margin: 0 0 24px 0;
-}
-.project{
-    width: 50%;
-    height: 325px;
-    margin: 24px 0;
-    padding: 12px 24px;
+
+
+@media (max-width: 640px) {
+    section {
+        padding: 2rem;
+    }
+
+    .project-title {
+        font-size: 2.4rem;
+    }
+
+    .section-title{
+            font-size: 1.25rem;
+    }
 }

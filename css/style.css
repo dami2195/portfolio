@@ -1,0 +1,43 @@
+/* Reset */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #0c0c0c;
+    color: #dbeafe;
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+}
+
+a {
+    color: #2563EB;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover,
+a:focus {
+    color: #1E40AF;
+    outline: none;
+}
+/* Footer */
+footer {
+    background-color: #0a0a0a;
+    color: #e0e7ff;
+    text-align: center;
+    font-size: 0.9rem;
+    flex-shrink: 0;
+}

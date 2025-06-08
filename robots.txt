@@ -1,10 +1,14 @@
+# robots.txt for https://www.damianogazzino.ch/
+
 User-agent: *
-Disallow: /prova/
-Disallow: /prova.html
-Allow: /
-Sitemap: https://damianogazzino.ch/sitemap.xml
-Disallow: /projects/detail.html?id=gestionale_web
-Disallow: /projects/detail.html?id=crm_web
-Disallow: /projects/detail.html?id=ecommerce
-Disallow: /projects/detail.html?id=tester_api
-Disallow: /projects/detail.html?id=contabilita
+Disallow: /js/
+Disallow: /css/
+Disallow: /images/
+Disallow: /*.zip$
+Disallow: /*.pdf$
+
+# Allow specific images used in metadata or Open Graph
+Allow: /images/profile.jpg
+
+# Sitemap (important for search engines)
+Sitemap: https://www.damianogazzino.ch/sitemap.xml
