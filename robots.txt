@@ -1,4 +1,4 @@
-# robots.txt for https://www.damianogazzino.ch/
+# robots.txt for https://damianogazzino.ch/
 
 User-agent: *
 Disallow: /js/
@@ -11,4 +11,4 @@ Disallow: /*.pdf$
 Allow: /images/profile.jpg
 
 # Sitemap (important for search engines)
-Sitemap: https://www.damianogazzino.ch/sitemap.xml
+Sitemap: https://damianogazzino.ch/sitemap.xml
