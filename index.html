@@ -1,9 +1,242 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta http-equiv="refresh" content="0; url=lang/en/index.html" />
-    <title>Redirecting...</title>
-  </head>
-  <body>
-  </body>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Base Meta -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Damiano Gazzino | Full Stack Developer - Innovative Digital Solutions</title>
+    <meta name="description"
+        content="Damiano Gazzino, web developer specializing in software development, web applications, and e-commerce solutions. Discover innovative projects and contact me for collaborations." />
+    <meta name="keywords"
+        content="Web developer, full stack developer, web programming, software development, custom e-commerce solutions, responsive websites, scalable APIs, microservices architecture, Damiano Gazzino" />
+    <meta name="author" content="Damiano Gazzino" />
+    <meta name="robots" content="index, follow" />
+    <!-- Canonical per la homepage italiana -->
+    <link rel="canonical" href="https://damianogazzino.ch/lang/en/index.html" />
+
+    <!-- Versioni alternate della homepage -->
+    <link rel="alternate" hreflang="en" href="https://damianogazzino.ch/lang/en/index.html" />
+    <link rel="alternate" hreflang="it" href="https://damianogazzino.ch/lang/it/index.html" />
+    <link rel="alternate" hreflang="x-default" href="https://damianogazzino.ch/" />
+    <!-- Favicon (aggiorna il percorso se serve) -->
+    <link rel="icon" href="../../images/favicon.ico" />
+
+    <!-- Open Graph (Facebook / LinkedIn) -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Damiano Gazzino | Full Stack Developer" />
+    <meta property="og:description"
+        content="I am a passionate website and software developer, dedicated to creating innovative, scalable and tailor-made solutions for the digital world." />
+    <meta property="og:url" content="https://damianogazzino.ch/" />
+    <meta property="og:image" content="https://www.damianogazzino.dev/assets/preview.jpg" />
+    <!-- Sostituisci con un'immagine reale -->
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Damiano Gazzino | Full Stack Developer" />
+    <meta name="twitter:description"
+        content="Discover innovative software, web apps and e-commerce platforms developed by Damiano Gazzino." />
+    <meta name="twitter:image" content="https://damianogazzino.ch/assets/preview.jpg" />
+
+    <!-- Structured Data: WebSite -->
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          "name": "Damiano Gazzino",
+          "url": "https://damianogazzino.ch"
+        }
+        </script>
+
+    <!-- Structured Data: Person -->
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "Person",
+          "name": "Damiano Gazzino",
+          "url": "https://damianogazzino.ch/lang/en/index.html",
+          "image": "https://damianogazzino.ch/images/profile.jpg",
+          "jobTitle": "Full Stack Developer",
+          "description": "Full stack developer focused on software development, web applications, and innovative digital solutions.",
+          "knowsAbout": [
+            "Software Development",
+            "Web Development",
+            "Responsive Websites",
+            "Scalable APIs",
+            "Microservices",
+            "E-commerce Platforms"
+          ],
+          "sameAs": [
+            "https://www.linkedin.com/in/damiano-gazzino-9983b01a2/"
+          ]
+        }
+        </script>
+
+    <!-- Structured Data: WebPage -->
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "WebPage",
+          "name": "Damiano Gazzino | Full Stack Developer",
+          "url": "https://damianogazzino.ch/lang/en/index.html",
+          "description": "Portfolio of Damiano Gazzino, showcasing projects in software development, APIs, microservices and e-commerce.",
+          "inLanguage": "en",
+          "mainEntity": {
+            "@type": "Person",
+            "name": "Damiano Gazzino",
+            "url": "https://damianogazzino.ch/lang/en/index.html"
+          }
+        }
+        </script>
+
+    <!-- Google Fonts: Inter & Montserrat -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Montserrat:wght@700&display=swap"
+        rel="stylesheet" />
+
+    <script src="../../js/system/jquery.min.js"></script>
+    <script src="../../js/menu.js"></script>
+    <script src="../../js/languages.js"></script>
+
+    <!--<script src="../../js/index.js"></script>
+    <script src="../../js/menu.js"></script>-->
+
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/navbar.css">
+    <link rel="stylesheet" href="../../css/scrollbar.css">
+    <link rel="stylesheet" href="../../css/index.css">
+
+</head>
+
+<body>
+
+    <nav aria-label="Navigation menu">
+        <div class="nav-container">
+            <button class="hamburger" aria-label="Apri menu" aria-expanded="false" aria-controls="menu">
+                ☰
+            </button>
+            <ul id="menu">
+                <li><a href="#about-me">About me</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="https://www.linkedin.com/in/damiano-gazzino-9983b01a2/" target="_blank">Contact me</a></li>
+                <li class="language-switcher">
+                    <button id="lang-btn" aria-haspopup="true" aria-expanded="false" aria-controls="lang-menu">
+                        <span>EN ▼</span>
+                    </button>
+                    <ul id="lang-menu" class="lang-dropdown" hidden>
+                        <li><a href="#" class="change-lang" data-lang="it">Italiano</a></li>
+                        <li><a href="#" class="change-lang" data-lang="en">English</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <header id="header" role="banner">
+        <div class="container">
+            <div class="profile-pic">
+                <img src="../../images/profile.jpg" alt="Damiano Gazzino" loading="lazy" width="280" height="280" />
+            </div>
+            <div class="intro-text">
+                <h1>Damiano Gazzino</h1>
+                <div class="tagline">
+                    Full Stack Developer
+                </div>
+                <p>
+                    I am a passionate website and software developer, dedicated to creating innovative, scalable and
+                    tailor-made solutions for the digital world.
+                </p>
+                <a href="#projects" class="btn-primary large" aria-label="Discover my projects">
+                    Discover my projects
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="about-me" role="region" aria-labelledby="about-me-title">
+            <h2 id="about-me-title">
+                About Me
+            </h2>
+            <div id="about-me-text">
+                <p>Hello! I am Damiano, a <strong>full stack developer</strong> with a strong passion for
+                    <strong>technology</strong> and <strong>innovation</strong>. My career is focused on
+                    <strong>software development</strong> and <strong>web application design</strong>, where I strive to
+                    turn ideas into effective digital solutions.
+                </p>
+                <p>I dedicate myself to creating <strong>responsive websites</strong> and use modern technologies like
+                    <strong>APIs</strong> and <strong>microservices</strong> to ensure scalable and high-performing
+                    applications. I am always eager to learn and stay updated on <strong>industry trends</strong>,
+                    tackling new challenges that allow me to grow professionally.
+                </p>
+                <p>My problem-solving attitude and ability to quickly adapt to new technologies enable me to
+                    successfully tackle complex projects. I am a motivated and results-oriented person, always ready to
+                    contribute to continuous improvement and innovation. My dedication to work and my eagerness to learn
+                    drive me to give my best in every challenge I face.</p>
+            </div>
+        </section>
+        <section id="projects" role="region" aria-labelledby="projects-title">
+            <h2 id="projects-title">
+                My Projects (selection)
+            </h2>
+            <div class="project-list">
+                <article class="project-card">
+                    <img src="../../images/gestionale.png" alt="Web Management System Club Pistola Tesserete"
+                        loading="lazy" />
+                    <div class="project-content">
+                        <h3>Web Management System Club Pistola Tesserete</h3>
+                        <p>A cutting-edge web management system for comprehensive club management, featuring
+                            functionalities for member management, licenses, invoicing, and statistics.</p>
+                        <a href="projects/management-web-club-pistola-tesserete.html" class="btn-primary">Find out
+                            more</a>
+                    </div>
+                </article>
+                <article class="project-card">
+                    <img src="../../images/shopcar.png" alt="E-Commerce Platform" loading="lazy" />
+                    <div class="project-content">
+                        <h3>E-Commerce Platform</h3>
+                        <p>Development of an innovative e-commerce platform designed to provide a seamless user
+                            experience and superior performance on any device.</p>
+                        <a href="projects/ecommerce.html" class="btn-primary">Find out more</a>
+                    </div>
+                </article>
+                <article class="project-card">
+                    <img src="../../images/crm.png" alt="Web CRM" loading="lazy" />
+                    <div class="project-content">
+                        <h3>Web CRM</h3>
+                        <p>A scalable and modern CRM system, designed with an API-first architecture to ensure efficient
+                            data synchronization through microservices.</p>
+                        <a href="projects/crm-web.html" class="btn-primary">Find out more</a>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <img src="../../images/testing_api.png" alt="API Tester" loading="lazy" />
+                    <div class="project-content">
+                        <h3>API Tester</h3>
+                        <p>An innovative software for API testing, equipped with an intuitive interface and automated
+                            testing features to simplify developers' work.</p>
+                        <a href="projects/tester-api.html" class="btn-primary">Find out more</a>
+                    </div>
+                </article>
+                <article class="project-card">
+                    <img src="../../images/contabilita_index.png" alt="Financial Accounting Management"
+                        loading="lazy" />
+                    <div class="project-content">
+                        <h3>Financial Accounting Management</h3>
+                        <p>An intuitive software for corporate accounting management, designed to simplify financial
+                            management and ensure accurate reporting.</p>
+                        <a href="projects/accounting.html" class="btn-primary">Find out more</a>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+    </main>
+
+    <footer role="contentinfo" id="footer-text">
+        &copy; 2024 Damiano Gazzino. All rights reserved.
+    </footer>
+</body>
+
 </html>
