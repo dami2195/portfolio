@@ -56,9 +56,9 @@
   
   <!--Project: Tester API -->
   <url>
-    <loc>https://damianogazzino.ch/lang/en/projects/tester-api.html</loc>
-    <xhtml:link rel="alternate" hreflang="it" href="https://damianogazzino.ch/lang/it/progetti/tester-api.html" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://damianogazzino.ch/lang/en/projects/tester-api.html" />
+    <loc>https://damianogazzino.ch/lang/en/projects/api-tester.html</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://damianogazzino.ch/lang/it/progetti/api-tester.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://damianogazzino.ch/lang/en/projects/api-tester.html" />
     <lastmod>2025-06-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
