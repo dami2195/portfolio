@@ -1,186 +1,632 @@
 :root {
-    --primary: #93c5fd;
-    --primary-light: #93c5fd;
-    --bg: #0a0a0a;
-    --text: #dbeafe;
-    --accent-bg: rgba(59, 130, 246, 0.08);
-    --bg-header: linear-gradient(to bottom, #040404, #0c0c0c);
+    --custom-dark: #1A1C20;
+    --custom-card: #20242D;
+    --custom-light: #F8F9FA;
+    --custom-muted: #ADB5BD;
+    --custom-accent: #00E8C7;
+    /* Il tuo verde-acqua */
+    --custom-accent-darker: #00A88D;
+
+    /* Colori specifici per l'illustrazione Evoluta */
+    --illus-bg-color: transparent;
+    --illus-screen-border: #444B5A;
+    /* Reso il bordo leggermente più scuro ma visibile */
+    --illus-screen-bg: var(--custom-card);
+    /* Lo sfondo del monitor è scuro */
+
+    --illus-module-bg: #323842;
+    /* Sfondo dei moduli interni: più scuro, ma distinguibile da custom-card */
+    --illus-module-text: var(--custom-light);
+    /* Testo dei moduli: molto chiaro per contrasto */
+    --illus-module-completed: var(--custom-accent);
+    /* Colore modulo completato: rimane il tuo verde-acqua */
+
+    --illus-final-goal-node: var(--custom-accent);
+    /* Nodo obiettivo finale */
+    --illus-final-goal-glow: #FFD700;
+    /* Glow nodo obiettivo */
+
+    --illus-shadow-soft: rgba(0, 0, 0, 0.15);
+    /* Aggiustate le ombre per sfondi scuri */
+    --illus-shadow-medium: rgba(0, 0, 0, 0.3);
+    --illus-shadow-strong: rgba(0, 0, 0, 0.5);
+    /* ... il resto delle tue variabili per il dashboard mockup ... */
+    --illus-dashboard-bg: var(--custom-card);
+    --illus-dashboard-border: #343A40;
+    --illus-chart-color-1: var(--custom-accent);
+    --illus-chart-color-2: #6F42C1;
+    --illus-lock-color: #6C757D;
+    /* Un grigio scuro per l'icona del lucchetto */
 }
 
-header {
-    background: var(--bg-header) !important;
-    height: 450px;
+.dashboard-illustration {
+    position: relative;
+    width: 350px;
+    /* Larghezza complessiva dell'illustrazione */
+    height: 280px;
+    /* Altezza complessiva dell'illustrazione */
+    background-color: #20242D;
+    /* Colore di sfondo della "finestra" principale */
+    border-radius: 12px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4), 0 0 20px rgba(0, 232, 199, 0.1);
+    overflow: hidden;
+    border: 1px solid rgba(0, 232, 199, 0.2);
+    margin: 0 auto;
+    /* Centra orizzontalmente */
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+}
+
+.dashboard-header-bar {
+    height: 25px;
+    background-color: #333;
+    border-bottom: 1px solid #444;
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+    border-radius: 5px 5px 0 0;
+    /* Angoli arrotondati solo in alto */
+    margin: -15px -15px 0 -15px;
+    /* Estende la barra fino ai bordi della finestra */
+}
+
+.dashboard-header-bar::before,
+.dashboard-header-bar::after {
+    content: '';
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    margin-right: 7px;
+}
+
+.dashboard-header-bar::before {
+    background-color: #FF5F56;
+    /* Rosso */
+}
+
+.dashboard-header-bar::after {
+    background-color: #FFBD2E;
+    /* Giallo */
+}
+
+.dashboard-header-bar .green-dot {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #28C940;
+    /* Verde */
+    margin-right: 7px;
+}
+
+.refined-evolved-objectives-illustration-wrapper,
+.refined-evolved-objectives-illustration-wrapper-mobile {
+    position: relative;
+    width: 320px;
+    /* Larghezza del canvas */
+    height: 240px;
+    /* Altezza del canvas */
+    background-color: transparent;
+    /* Sfondo trasparente */
+    border-radius: 12px;
+    overflow: hidden;
+    margin: 0 auto 20px auto;
+    box-shadow: none;
+    /* Rimosso l'ombra del wrapper se trasparente */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: scale(0.95);
+}
+
+.refined-evolved-objectives-illustration-wrapper-mobile {
+    display: none
+}
+.illus-monitor-frame {
+    position: absolute;
+    width: 250px;
+    height: 180px;
+    background-color: var(--custom-card);
+    /* Colore scuro simile alla card */
+    border-radius: 20px;
+    box-shadow: 0 15px 30px var(--illus-shadow-medium);
+    /* Mantenuto il bordo/ombra */
+    transform: rotate(-8deg);
+    /* Leggerment e inclinato per dinamismo */
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.illus-monitor-screen {
+    width: calc(100% - 20px);
+    /* Bordo interno */
+    height: calc(100% - 20px);
+    background-color: var(--illus-screen-bg);
+    /* **CAMBIATO QUI** */
+    border-radius: 15px;
+    padding: 15px;
+    overflow: hidden;
+    position: relative;
+    display: grid;
+    /* Utilizzo di Grid per il layout interno */
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto 1fr auto;
+    gap: 10px;
+    align-items: center;
+    justify-items: center;
+    border: 1px solid var(--illus-screen-border);
+    /* Bordo dello schermo aggiunto qui */
+}
+
+.screen-top-bar {
+    grid-column: 1 / -1;
+    /* Occupa tutta la larghezza */
+    width: 90%;
+    height: 8px;
+    background-color: var(--illus-module-bg);
+    border-radius: 4px;
+    margin-bottom: 5px;
+    position: relative;
+}
+
+
+
+
+/**/
+.overview-illustration-wrapper,
+.overview-illustration-wrapper-mobile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 20px;
+}
+
+.overview-illustration-wrapper-mobile {
+    display: none;
+}
+
+.dashboard-mockup {
+    position: relative;
+    width: 250px;
+    height: 180px;
+    background-color: var(--illus-dashboard-bg);
+    border-radius: 15px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.6);
+    border: 1px solid var(--illus-dashboard-border);
+    overflow: hidden;
+    transform: rotateX(10deg) rotateY(-10deg) rotateZ(5deg);
+    /* Leggera prospettiva */
+    transform-style: preserve-3d;
+}
+
+.dashboard-header {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    width: calc(100% - 30px);
+    height: 10px;
+    background-color: var(--custom-card);
+    border-radius: 5px;
+}
+
+.chart-container {
+    position: absolute;
+    top: 40px;
+    left: 15px;
+    width: calc(100% - 30px);
+    height: 70px;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+}
+
+.chart-bar-css {
+    width: 15%;
+    background-color: var(--illus-chart-color-1);
+    border-radius: 3px 3px 0 0;
+    opacity: 0.8;
+    box-shadow: 0 0 5px var(--illus-chart-color-1);
+}
+
+.chart-bar-css:nth-child(1) {
+    height: 40%;
+}
+
+.chart-bar-css:nth-child(2) {
+    height: 70%;
+}
+
+.chart-bar-css:nth-child(3) {
+    height: 55%;
+    background-color: var(--illus-chart-color-2);
+}
+
+.chart-bar-css:nth-child(4) {
+    height: 85%;
+}
+
+.chart-bar-css:nth-child(5) {
+    height: 60%;
+    background-color: var(--illus-chart-color-2);
+}
+
+.growth-line-css {
+    position: absolute;
+    top: 60px;
+    left: 15px;
+    width: calc(100% - 30px);
+    height: 2px;
+    background: linear-gradient(to right, var(--illus-chart-color-1), var(--illus-chart-color-2));
+    box-shadow: 0 0 8px var(--illus-chart-color-1);
+    z-index: 1;
+}
+
+.growth-line-css::before,
+.growth-line-css::after {
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background-color: var(--illus-chart-color-1);
+    border-radius: 50%;
+    top: -3px;
+}
+
+.growth-line-css::before {
+    left: 0;
+}
+
+.growth-line-css::after {
+    right: 0;
+}
+
+
+.lock-icon-css {
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    width: 40px;
+    height: 30px;
+    background-color: var(--illus-lock-color);
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+.lock-icon-css::before {
+    content: '';
+    position: absolute;
+    top: -15px;
+    width: 20px;
+    height: 20px;
+    border: 4px solid var(--illus-lock-color);
+    border-radius: 50%;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+    transform: rotate(45deg);
+}
+
+.lock-icon-css::after {
+    content: '';
+    width: 8px;
+    height: 8px;
+    background-color: var(--illus-dashboard-bg);
+    border-radius: 50%;
+}
+
+.motivation-illustration-container,
+.motivation-illustration-container-mobile {
+    position: relative;
+    width: 320px;
+    height: 200px;
+    background-color: var(--custom-card); /* Sfondo del "monitor" principale */
+    border-radius: 15px;
+    box-shadow: 0 10px 20px var(--illus-shadow-medium);
+    margin: 0 auto;
+    overflow: hidden;
+    display: flex; /* Centra il contenuto */
+    align-items: center;
+    justify-content: center;
+}
+
+.motivation-illustration-container-mobile {
+    display: none;
+}
+.organized-dashboard {
+    width: 80%;
+    height: 80%;
+    background-color: var(--custom-bg-dark); /* Sfondo scuro della dashboard */
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: inset 0 0 15px rgba(0,0,0,0.4); /* Ombra interna per profondità */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.dashboard-header {
+    width: 90%;
+    height: 8px;
+    background-color: var(--custom-muted); /* Barra intestazione */
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+.dashboard-chart-bar {
+    width: 80%;
+    height: 12px;
+    background-color: var(--custom-accent); /* Colore accentato per i grafici */
+    border-radius: 3px;
+    margin-bottom: 8px;
+}
+.dashboard-chart-bar:nth-child(2) { width: 70%; opacity: 0.9; }
+.dashboard-chart-bar:nth-child(3) { width: 90%; opacity: 0.8; }
+.dashboard-chart-bar:nth-child(4) { width: 60%; opacity: 0.7; }
+
+.dashboard-summary-text {
+    width: 70%;
+    height: 6px;
+    background-color: var(--custom-light); /* Testo simulato */
+    border-radius: 2px;
+    margin-top: 10px;
+    opacity: 0.6;
+}
+.dashboard-summary-text:nth-child(6) { width: 50%; }
+
+/* 2. Moduli/Task in griglia (rimosso il "label" linea) */
+.screen-module {
+    width: 50px;
+    height: 50px;
+    background-color: var(--illus-module-bg);
+    border-radius: 10px;
+    box-shadow: 0 2px 5px var(--illus-shadow-soft);
     display: flex;
     flex-direction: column;
     justify-content: center;
-    /* Centra verticalmente */
     align-items: center;
-    /* Centra orizzontalmente */
+    font-size: 0.7em;
+    color: var(--illus-module-text);
     text-align: center;
-    padding: 0 1rem;
+    line-height: 1.2;
+    position: relative;
 }
 
-section {
-    max-width: 960px;
-    margin: 4rem auto 1rem auto;
-    padding: 4rem;
-    background: linear-gradient(145deg, rgba(30, 58, 138, 0.06), rgba(59, 130, 246, 0.05));
-    border: 1px solid rgba(59, 130, 246, 0.15);
-    border-radius: 20px;
-    box-shadow: 0 0 40px rgba(59, 130, 246, 0.15);
-    backdrop-filter: blur(3px);
+.screen-module.completed {
+    background-color: var(--illus-module-completed);
+    color: white;
+    box-shadow: 0 0 10px var(--custom-accent), 0 2px 5px var(--illus-shadow-soft);
 }
 
-.project-title {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 2.6rem;
-    font-weight: 700;
-    text-align: center;
-    color: var(--primary-light);
-    text-shadow: 0 0 10px rgba(147, 197, 253, 0.4);
+.screen-module.completed::after {
+    /* Spunta per i moduli completati */
+    content: '';
+    position: absolute;
+    font-size: 2em;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    opacity: 0.8;
 }
 
-.project-subtitle {
-    text-align: center;
-    font-size: 1.1rem;
-    color: #93c5fd;
-    margin-bottom: 3rem;
-    letter-spacing: 0.05em;
-    opacity: 0.9;
-}
-
-.section-title {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1.8rem;
-    font-weight: 700;
-    color: var(--primary);
-    margin-bottom: 1.5rem;
-    border-bottom: 2px solid var(--primary);
-    padding-bottom: 0.4rem;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-}
-
-.project-content {
-    font-size: 1.1rem;
-}
-
-.project-content p {
-    margin-bottom: 1.5rem;
-    text-shadow: 0 0 6px rgba(203, 213, 225, 0.2);
-}
-
-.tech-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.6rem;
-    margin: 1rem auto 3rem auto;
-    max-width: 900px;
-    justify-content: center;
-    padding: 1rem;
-    border-radius: 16px;
-}
-
-.tech-tags span {
-    background-color: var(--accent-bg);
-    color: var(--primary-light);
-    padding: 0.5rem 1rem;
-    border-radius: 30px;
-    font-size: 0.95rem;
-    font-weight: 500;
-    letter-spacing: 0.02em;
-    transition: all 0.3s ease;
-    border: 1px solid transparent;
-    backdrop-filter: blur(2px);
-}
-
-.btn-primary {
-    display: inline-block;
-    background: transparent;
-    color: var(--primary);
-    border: 2px solid var(--primary);
-    padding: 0.7rem 2rem;
-    border-radius: 40px;
-    font-weight: 600;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    transition: all 0.3s ease;
-    text-align: center;
-    cursor: pointer;
-}
-
-.btn-primary:hover {
-    background-color: var(--primary);
-    color: #fff;
-    box-shadow: 0 0 25px var(--primary);
-}
-
-.project-gallery {
-    width: 80%;
-    margin: 4rem auto 2rem auto;
-    padding: 2rem 4rem;
-    background: linear-gradient(145deg, rgba(30, 58, 138, 0.06), rgba(59, 130, 246, 0.05));
-    border: 1px solid rgba(59, 130, 246, 0.15);
-    border-radius: 20px;
-    box-shadow: 0 0 40px rgba(59, 130, 246, 0.15);
-    backdrop-filter: blur(3px);
-}
-
-.gallery-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 1.5rem;
-}
-
-.gallery-grid img {
-    width: 100%;
-    height: 140px;
-    object-fit: cover;
-    border-radius: 16px;
-    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
-    cursor: zoom-in;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.gallery-grid img:hover {
-    transform: scale(1.05);
-    box-shadow: 0 8px 25px rgba(59, 130, 246, 0.6);
-}
-
-.lightbox {
-
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.85);
+/* 3. Nodo Obiettivo Centrale */
+.screen-goal-node-main {
+    grid-column: 2;
+    /* Al centro della griglia */
+    grid-row: 3;
+    /* Ultima riga */
+    width: 55px;
+    height: 55px;
+    background-color: var(--illus-final-goal-node);
+    border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
-    cursor: zoom-out;
-    z-index: 9999;
+    font-size: 2.5em;
+    color: white;
+    font-weight: bold;
+    box-shadow: 0 0 20px var(--illus-final-goal-glow), 0 0 40px rgba(255, 215, 0, 0.6);
+    z-index: 10;
+    /* Sopra tutto il resto */
+    margin-top: 10px;
+    /* Spazio dal contenuto sopra */
 }
 
-.lightbox img {
-    max-width: 90%;
-    max-height: 90vh;
-    box-shadow: 0 0 70px rgba(59, 130, 246, 0.25);
-    border-radius: 10px;
+.screen-goal-node-main::after {
+    content: '✓';
+}
+
+/* Elementi decorativi esterni raffinati (rimossi le linee) */
+.illus-floating-dot {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: var(--custom-accent);
+    /* Verde-acqua */
+    border-radius: 50%;
+    opacity: 0.6;
+    filter: blur(1px);
+    /* Effetto soft */
+    box-shadow: 0 0 10px var(--custom-accent);
+    z-index: 1;
+}
+
+.illus-floating-dot.dot-1 {
+    top: 20px;
+    left: 20px;
+    transform: rotate(-8deg);
+}
+
+.illus-floating-dot.dot-2 {
+    bottom: 20px;
+    right: 20px;
+    transform: rotate(-8deg);
 }
 
 
-
-@media (max-width: 640px) {
-    section {
-        padding: 2rem;
+/* Responsive adjustments */
+@media (max-width: 991px) {
+    #hero .container{
+        width: 90%
+    }
+    .overview-illustration-wrapper-mobile,
+    .motivation-illustration-container-mobile,
+    .refined-evolved-objectives-illustration-wrapper-mobile{
+        display: flex;
+        margin-bottom: 20px
+    }
+    .refined-evolved-objectives-illustration-wrapper {
+        display: none;
+        /*width: 280px;
+        height: 200px;
+        margin-bottom: 1.5rem;
+        transform: scale(0.9);*/
     }
 
-    .project-title {
-        font-size: 2.4rem;
+    .illus-monitor-frame {
+        width: 220px;
+        height: 160px;
+        border-radius: 18px;
     }
 
-    .section-title{
-            font-size: 1.25rem;
+    .illus-monitor-screen {
+        width: calc(100% - 15px);
+        height: calc(100% - 15px);
+        border-radius: 12px;
+        padding: 12px;
+        border: 1px solid var(--illus-screen-border);
+        /* Bordo dello schermo aggiunto qui */
     }
+
+    .screen-top-bar {
+        height: 7px;
+        margin-bottom: 4px;
+    }
+
+    .screen-module {
+        width: 45px;
+        height: 45px;
+        border-radius: 8px;
+        font-size: 0.65em;
+    }
+
+    .screen-module.completed::after {
+        font-size: 1.8em;
+    }
+
+    .screen-goal-node-main {
+        width: 50px;
+        height: 50px;
+        font-size: 2.2em;
+    }
+
+    .illus-floating-dot {
+        width: 18px;
+        height: 18px;
+    }
+
+    .illus-floating-dot.dot-1 {
+        top: 15px;
+        left: 15px;
+    }
+
+    .illus-floating-dot.dot-2 {
+        bottom: 15px;
+        right: 15px;
+    }
+
+    .overview-illustration-wrapper {
+        display: none
+    }
+
+    .accounting-dashboard-illustration {
+        width: 280px;
+        height: 220px;
+        margin-bottom: 2rem;
+        padding: 10px;
+    }
+
+    .dashboard-header-bar {
+        margin: -10px -10px 10px -10px;
+    }
+
+    .dashboard-content {
+        gap: 10px;
+    }
+
+    .bar {
+        width: 10px;
+    }
+
+    .pie-chart {
+        width: 50px;
+        height: 50px;
+    }
+
+    .financial-icon {
+        width: 25px;
+        height: 25px;
+        font-size: 1em;
+    }
+
+    .dashboard-mockup {
+        width: 200px;
+        height: 140px;
+    }
+
+    .dashboard-header {
+        height: 8px;
+    }
+
+    .chart-container {
+        top: 30px;
+        height: 50px;
+    }
+
+    .lock-icon-css {
+        width: 30px;
+        height: 20px;
+        bottom: 10px;
+        right: 10px;
+    }
+
+    .lock-icon-css::before {
+        top: -10px;
+        width: 15px;
+        height: 15px;
+        border-width: 3px;
+    }
+
+    .lock-icon-css::after {
+        width: 6px;
+        height: 6px;
+    }
+
+    .motivation-illustration-container {
+        display: none
+        /*width: 280px;
+        height: 180px;*/
+    }
+
+    .motivation-illustration-container-mobile{
+        width: 280px;
+        height: 180px;
+        margin: 0 auto 24px auto
+    }
+
+    .organized-dashboard {
+        width: 85%;
+        height: 85%;
+        padding: 10px;
+    }
+    .dashboard-header { height: 6px; margin-bottom: 8px; }
+    .dashboard-chart-bar { height: 10px; margin-bottom: 6px; }
+    .dashboard-summary-text { height: 5px; margin-top: 8px; }
 }

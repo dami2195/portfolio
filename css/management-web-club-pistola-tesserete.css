@@ -1,0 +1,201 @@
+header .container>div:nth-child(1){
+    max-width: 750px
+}
+
+
+/* Container principale che simula la finestra del software */
+.app-frame {
+    width: 350px; /* Larghezza desiderata */
+    height: 200px; /* Nuova altezza */
+    background-color: #2a2f38;
+    border-radius: 12px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.6);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #4a5160;
+    margin-top: 48px
+}
+
+/* Barra del titolo/header dell'applicazione */
+.app-header-bar {
+    height: 25px;
+    background-color: #3c424d;
+    border-bottom: 1px solid #4a5160;
+    display: flex;
+    align-items: center;
+    padding: 0 8px;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    position: relative;
+}
+
+/* Pulsanti di controllo (chiudi, minimizza, massimizza) */
+.app-control-dots {
+    display: flex;
+    margin-right: 8px;
+}
+.app-control-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    margin-right: 3px;
+}
+.app-control-dot.red { background-color: #ff6b6b; }
+.app-control-dot.yellow { background-color: #ffe66d; }
+.app-control-dot.green { background-color: #4CAF50; }
+
+/* Titolo o nome dell'applicazione */
+.app-title {
+    flex-grow: 1;
+    font-size: 0.7em;
+    color: rgba(255,255,255,0.85);
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: calc(100% - 60px);
+}
+
+/* Contenuto principale dell'applicazione (barra laterale + dashboard) */
+.app-content {
+    flex-grow: 1;
+    display: flex;
+    background-color: #2a2f38;
+    padding: 6px;
+}
+
+/* Barra laterale di navigazione */
+.sidebar {
+    width: 80px;
+    background-color: #3c424d;
+    border-radius: 5px;
+    padding: 6px;
+    margin-right: 8px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+    border: 1px solid #4a5160;
+}
+
+.sidebar-item {
+    height: 16px;
+    background-color: #4a5160;
+    border-radius: 2px;
+    margin-bottom: 4px;
+    opacity: 0.7;
+}
+.sidebar-item:first-child {
+    opacity: 1;
+    background-color: #00e8c7;
+    box-shadow: 0 1px 3px rgba(0,232,199,0.3);
+}
+.sidebar-item:last-child {
+    margin-bottom: 0;
+}
+
+/* Area del dashboard principale */
+.main-dashboard {
+    flex-grow: 1;
+    background-color: #3c424d;
+    border-radius: 5px;
+    padding: 8px;
+    /* Modificato per una singola colonna per meglio adattare il contenuto */
+    display: grid;
+    grid-template-columns: 1fr; /* Una sola colonna */
+    gap: 8px; /* Spazio tra i widget */
+    box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+    border: 1px solid #4a5160;
+    overflow-y: auto; /* Permetti lo scroll se più widget in futuro */
+}
+
+/* Personalizzazione scrollbar per un look più pulito */
+.main-dashboard::-webkit-scrollbar {
+    width: 4px;
+}
+.main-dashboard::-webkit-scrollbar-track {
+    background: #3c424d;
+    border-radius: 10px;
+}
+.main-dashboard::-webkit-scrollbar-thumb {
+    background: #5a6270;
+    border-radius: 10px;
+}
+.main-dashboard::-webkit-scrollbar-thumb:hover {
+    background: #6c757d;
+}
+
+/* Widget del dashboard */
+.dashboard-widget {
+    background-color: #2a2f38;
+    border-radius: 3px;
+    padding: 6px;
+    box-shadow: 0 1px 6px rgba(0,0,0,0.2);
+    border: 1px solid #4a5160;
+    /* Altezza più grande ora che sono solo due */
+    height: auto; /* Rimuovi altezza fissa per far riempire lo spazio */
+    min-height: 60px; /* Altezza minima per estetica */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Varianti per simulare diversi tipi di widget */
+.dashboard-widget.small-chart::before {
+    content: '';
+    width: 70%; /* Aumentato per visibilità */
+    height: 50%; /* Aumentato per visibilità */
+    background-color: rgba(0,232,199,0.3);
+    border-radius: 2px;
+    position: relative;
+}
+
+.dashboard-widget.data-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-around;
+}
+.dashboard-widget.data-card::before {
+    content: '';
+    width: 60%; /* Aumentato */
+    height: 10px; /* Mantenuto */
+    background-color: rgba(255,255,255,0.2);
+    border-radius: 2px;
+    margin-bottom: 4px;
+}
+.dashboard-widget.data-card::after {
+    content: '';
+    width: 40%; /* Aumentato */
+    height: 7px; /* Mantenuto */
+    background-color: rgba(255,255,255,0.1);
+    border-radius: 2px;
+}
+
+/* Variabili di colore (mantenute per coerenza) */
+:root {
+    --api-console-bg: #2a2f38;
+    --api-console-border: #4a5160;
+    --api-header-bar-bg: #3c424d;
+    --api-control-dot-red: #ff6b6b;
+    --api-control-dot-yellow: #ffe66d;
+    --api-control-dot-green: #4CAF50;
+    --api-request-line-bg: #4a5160;
+    --api-request-text-color: #e0e0e0;
+    --api-request-method-bg: #3c424d;
+    --api-response-bg: #3c424d;
+    --api-response-text: #e0e0e0;
+    --api-status-ok: #28a745;
+    --api-flow-dot: #00e8c7;
+    --illus-bg-color: #1a1e26;
+}
+
+@media (max-width: 991px) {
+    .app-frame{
+        width: 100%
+    }
+
+}

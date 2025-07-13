@@ -1,0 +1,277 @@
+:root {
+    --api-console-bg: #2a2f38;
+    /* Sfondo della console */
+    --api-console-border: #4a5160;
+    /* Bordo della console */
+    --api-header-bar-bg: #3c424d;
+    /* Sfondo della barra superiore */
+    --api-control-dot-red: #ff6b6b;
+    /* Rosso per i controlli */
+    --api-control-dot-yellow: #ffe66d;
+    /* Giallo per i controlli */
+    --api-control-dot-green: #4CAF50;
+    /* Verde per i controlli */
+
+    /* Colori aggiornati per la richiesta */
+    --api-request-line-bg: #4a5160;
+    /* Un grigio più scuro e coeso per lo sfondo della riga di richiesta */
+    --api-request-text-color: #e0e0e0;
+    /* Testo chiaro */
+    --api-request-method-bg: #3c424d;
+    /* Sfondo scuro per il metodo */
+
+    --api-response-bg: #3c424d;
+    /* Sfondo del blocco risposta */
+    --api-response-text: #e0e0e0;
+    /* Colore testo risposta */
+    --api-status-ok: #28a745;
+    /* Verde per stato OK */
+    --api-flow-dot: #00e8c7;
+    /* Colore per i puntini del flusso */
+}
+
+
+/* Stili per l'illustrazione API Tester */
+.api-tester-illustration-container {
+    position: relative;
+    width: 380px;
+    height: 250px;
+    background-color: var(--illus-bg-color, #1a1e26);
+    /* Usa la variabile esistente o fallback */
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+    margin: 0 auto;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.api-console {
+    width: 90%;
+    height: 85%;
+    background-color: var(--api-console-bg);
+    border-radius: 8px;
+    border: 1px solid var(--api-console-border);
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+.api-console-header {
+    height: 25px;
+    background-color: var(--api-header-bar-bg);
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+    border-bottom: 1px solid var(--api-console-border);
+}
+
+.api-control-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+
+.api-control-dot.red {
+    background-color: var(--api-control-dot-red);
+}
+
+.api-control-dot.yellow {
+    background-color: var(--api-control-dot-yellow);
+}
+
+.api-control-dot.green {
+    background-color: var(--api-control-dot-green);
+}
+
+.api-content {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    height: calc(100% - 25px);
+    /* Sottrai l'altezza dell'header */
+    justify-content: space-around;
+    align-items: flex-start;
+    /* Allinea a sinistra */
+}
+
+.api-request-line {
+    width: 90%;
+    height: 30px;
+    /* Aumentato per contenere il testo */
+    background-color: var(--api-request-line-bg);
+    /* Nuovo colore di sfondo */
+    border-radius: 5px;
+    /* Arrotondato leggermente */
+    position: relative;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    /* Allinea il contenuto a sinistra */
+    color: var(--api-request-text-color);
+    /* Nuovo colore del testo */
+    font-size: 0.8em;
+    font-weight: bold;
+    padding: 0;
+    /* Padding interno */
+}
+
+.api-request-method {
+    background-color: var(--api-request-method-bg);
+    /* Sfondo scuro per il metodo */
+    padding: 3px 8px;
+    border-radius: 3px;
+    margin-right: 8px;
+    /* Spazio tra metodo e URL */
+}
+
+.api-request-url {
+    color: rgba(255, 255, 255, 0.7);
+    /* Leggermente meno brillante del testo principale */
+    font-weight: normal;
+    /* L'URL può essere meno bold */
+}
+
+/* Animazioni rimosse:
+@keyframes request-pulse {
+    0% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.02); opacity: 0.9; }
+    100% { transform: scale(1); opacity: 1; }
+}
+*/
+
+.api-response-block {
+    width: 90%;
+    background-color: var(--api-response-bg);
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    font-size: 0.8em;
+    color: var(--api-response-text);
+    position: relative;
+    align-self: flex-start;
+}
+
+.api-response-block::before {
+    content: 'Status: OK';
+    position: absolute;
+    top: -10px;
+    left: 10px;
+    background-color: var(--api-status-ok);
+    color: white;
+    padding: 2px 8px;
+    border-radius: 3px;
+    font-size: 0.7em;
+    font-weight: bold;
+}
+
+.api-response-line {
+    width: 100%;
+    height: 8px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 2px;
+    margin-bottom: 5px;
+}
+
+.api-response-line:nth-child(1) {
+    width: 90%;
+}
+
+.api-response-line:nth-child(2) {
+    width: 70%;
+}
+
+.api-response-line:nth-child(3) {
+    width: 85%;
+}
+
+.api-response-line:last-child {
+    margin-bottom: 0;
+}
+
+/* Animazioni dei puntini di flusso rimosse */
+.api-flow-dot {
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    background-color: var(--api-flow-dot);
+    border-radius: 50%;
+    opacity: 0;
+    /* Imposta l'opacità a 0 per nasconderli, dato che non si animano */
+    /* animation: flow-dots 3s infinite ease-out; <- Rimosso */
+}
+
+/* Posizioni mantenute ma senza animazione */
+.api-flow-dot:nth-child(1) {
+    left: 5%;
+    top: 20%;
+}
+
+.api-flow-dot:nth-child(2) {
+    left: 15%;
+    top: 35%;
+}
+
+.api-flow-dot:nth-child(3) {
+    left: 30%;
+    top: 50%;
+}
+
+.api-flow-dot:nth-child(4) {
+    right: 15%;
+    bottom: 25%;
+}
+
+.api-flow-dot:nth-child(5) {
+    right: 5%;
+    bottom: 40%;
+}
+
+/* Animazioni rimosse:
+@keyframes flow-dots {
+    0% { transform: translate(0, 0); opacity: 0; }
+    20% { opacity: 1; }
+    80% { transform: translate(20px, 20px); opacity: 1; }
+    100% { transform: translate(40px, 40px); opacity: 0; }
+}
+*/
+
+/* Responsive adjustments */
+@media (max-width: 991px) {
+    .api-tester-illustration-container {
+        width: 100%;
+        height: 220px;
+    }
+
+    .api-console-header {
+        height: 20px;
+    }
+
+    .api-control-dot {
+        width: 6px;
+        height: 6px;
+    }
+
+    .api-content {
+        padding: 10px;
+    }
+
+    .api-request-line {
+        height: 25px;
+        font-size: 0.7em;
+    }
+
+    .api-request-method {
+        padding: 2px 6px;
+    }
+
+    .api-response-block::before {
+        font-size: 0.6em;
+        top: -8px;
+    }
+}

@@ -1,0 +1,143 @@
+
+
+
+.dashboard-content {
+    flex-grow: 1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* Due colonne */
+    grid-template-rows: auto auto;
+    /* Righe automatiche */
+    gap: 15px;
+    /* Spazio tra gli elementi della griglia */
+}
+
+.dashboard-card {
+    background-color: #181A20;
+    /* Sfondo scuro per le card interne */
+    border-radius: 8px;
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.card-title-placeholder {
+    height: 10px;
+    background-color: #A0A0A0;
+    /* Grigio per il titolo placeholder */
+    width: 60%;
+    border-radius: 3px;
+    margin-bottom: 8px;
+}
+
+/* Stili per il grafico a barre (placeholder) */
+.bar-chart {
+    display: flex;
+    align-items: flex-end;
+    height: 60px;
+    gap: 4px;
+    border-bottom: 1px solid #444;
+    padding-bottom: 5px;
+}
+
+.bar {
+    width: 12px;
+    /* Larghezza delle barre */
+    background-color: #00E8C7;
+    /* Colore accento per le barre */
+    border-radius: 2px 2px 0 0;
+    transition: height 0.5s ease-out;
+    /* Animazione per l'altezza delle barre */
+}
+
+/* Altezze simulate per le barre */
+.bar:nth-child(1) {
+    height: 40%;
+}
+
+.bar:nth-child(2) {
+    height: 70%;
+    background-color: #00A88D;
+}
+
+/* Variazione di colore */
+.bar:nth-child(3) {
+    height: 55%;
+}
+
+.bar:nth-child(4) {
+    height: 80%;
+    background-color: #00A88D;
+}
+
+.bar:nth-child(5) {
+    height: 30%;
+}
+
+/* Stili per il grafico a torta (placeholder) */
+.pie-chart {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background: conic-gradient(#00E8C7 0% 30%,
+            /* Sezione 1 */
+            #00A88D 30% 60%,
+            /* Sezione 2 */
+            #A0A0A0 60% 80%,
+            /* Sezione 3 */
+            #6c757d 80% 100%
+            /* Sezione 4 */
+        );
+    margin: 0 auto;
+    /* Centra il grafico a torta */
+}
+
+/* Stili per le linee di testo/dati (placeholder) */
+.data-line-placeholder {
+    height: 8px;
+    background-color: #A0A0A0;
+    border-radius: 2px;
+    margin-bottom: 6px;
+    opacity: 0.7;
+}
+
+.data-line-placeholder.short {
+    width: 40%;
+}
+
+.data-line-placeholder.medium {
+    width: 70%;
+}
+
+.data-line-placeholder.long {
+    width: 90%;
+}
+
+/* Icona stilizzata (es. un simbolo di dollaro o euro) */
+.financial-icon {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #00E8C7;
+    color: #181A20;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 1.2em;
+    box-shadow: 0 0 8px rgba(0, 232, 199, 0.5);
+    margin-top: auto;
+    /* Spinge l'icona in basso nella card */
+    align-self: flex-end;
+    /* Allinea a destra nella card */
+}
+
+/* Responsive adjustments */
+@media (max-width: 991px) {
+    .dashboard-illustration{
+        margin: 36px auto;
+        width: 100%
+    }
+}

@@ -1,0 +1,566 @@
+:root {
+    --custom-primary: #007bff; /* Blu primario */
+    --custom-secondary: #6c757d; /* Grigio secondario */
+    --custom-success: #28a745; /* Verde per successo */
+    --custom-info: #17a2b8; /* Azzurro per info */
+    --custom-warning: #ffc107; /* Giallo per avviso */
+    --custom-danger: #dc3545; /* Rosso per pericolo */
+    --custom-light: #F8F9FA; /* Grigio chiaro per testo */
+    --custom-dark: #212529; /* Nero per testo principale */
+    --custom-muted: #6c757d; /* Grigio muto */
+
+    --custom-bg-light: #F8F9FA; /* Sfondo chiaro */
+    --custom-bg-dark: #343A40; /* Sfondo scuro */
+    --custom-card: #3C424D; /* Sfondo delle card/componenti scuri */
+
+    /* Colori accentati (adattali al tuo brand) */
+    --custom-accent: #20C997; /* Verde acqua accentato */
+    --custom-accent-darker: #1A9C78; /* Una tonalità più scura dell'accento */
+
+    /* Font */
+    --font-family-sans-serif: 'DM Sans', sans-serif;
+
+    /* Ombre e effetti per coerenza visiva */
+    --custom-shadow-sm: 0 .125rem .25rem rgba(0,0,0,.075);
+    --custom-shadow: 0 .5rem 1rem rgba(0,0,0,.15);
+    --custom-shadow-lg: 0 1rem 3rem rgba(0,0,0,.175);
+
+    /* Colori specifici per l'illustrazione dell'obiettivo (illus-monitor-frame) */
+    --illus-bg-color: transparent;
+    --illus-screen-border: #444B5A;
+    --illus-screen-bg: var(--custom-card);
+
+    --illus-module-bg: #323842;
+    --illus-module-text: var(--custom-light);
+    --illus-module-completed: var(--custom-accent);
+
+    --illus-final-goal-node: var(--custom-accent);
+    --illus-final-goal-glow: #FFD700;
+
+    --illus-shadow-soft: rgba(0, 0, 0, 0.15);
+    --illus-shadow-medium: rgba(0, 0, 0, 0.3);
+    --illus-shadow-strong: rgba(0, 0, 0, 0.5);
+
+    /* Variabili per il dashboard mockup (se presenti) */
+    --illus-dashboard-bg: var(--custom-card);
+    --illus-dashboard-border: #343A40;
+    --illus-chart-color-1: var(--custom-accent);
+    --illus-chart-color-2: #6F42C1;
+    --illus-lock-color: #6C757D;
+
+
+    --illus-bg-color: #1a1e26; /* Sfondo scuro */
+            --path-color: #3b424e; /* Colore del percorso */
+            --milestone-color: #2e343e; /* Colore delle tappe */
+            --milestone-active-color: var(--custom-accent); /* Colore della tappa attiva/raggiunta */
+            --final-goal-color: #28a745; /* Verde brillante per l'obiettivo finale */
+            --data-flow-color: rgba(108, 117, 125, 0.3); /* Colore del flusso dati */
+            --interface-panel-bg: #4a5160; /* Sfondo dei pannelli interfaccia */
+            --interface-bar-color: rgba(255,255,255,0.1);
+            --interface-bar-fill-color: var(--custom-info);
+}
+
+/* --- Stili per l'illustrazione CRM Web (Processi e Dati) --- */
+.crm-illustration-container {
+    position: relative;
+    width: 370px;
+    height: 250px;
+    background-color: var(--custom-card); /* Sfondo del "dispositivo" principale */
+    border-radius: 15px;
+    box-shadow: 0 10px 20px var(--illus-shadow-medium);
+    margin: 0 auto;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dashboard-illustration{
+    height: 250px;
+}
+.dashboard-card{
+    position: absolute; /* Il card si posiziona rispetto al padre .dashboard-content */
+    left: 0;
+    width: 100%; /* Occupa tutta la larghezza del padre (incluso il padding se non specificato diversamente) */
+    box-sizing: border-box;
+}
+.crm-screen {
+    background-color: var(--custom-bg-dark); /* Sfondo scuro della schermata CRM */
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: inset 0 0 10px rgba(0,0,0,0.5); /* Ombra interna per profondità */
+    display: grid;
+    grid-template-columns: 1fr 2.5fr; /* Sidebar più stretta, contenuto più ampio */
+    gap: 8px;
+}
+
+.crm-sidebar {
+    background-color: var(--illus-module-bg); /* Colore sidebar, leggermente più chiaro del bg-dark */
+    border-radius: 6px;
+    padding: 8px 5px; /* Padding più stretto */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; /* Allinea in alto */
+}
+
+.sidebar-icon {
+    width: 18px;
+    height: 18px;
+    background-color: var(--custom-muted); /* Icone della sidebar */
+    border-radius: 3px;
+    margin-bottom: 12px; /* Spazio tra le icone */
+    opacity: 0.7;
+}
+.sidebar-icon:first-child { background-color: var(--custom-accent); opacity: 1; } /* Icona attiva */
+
+.crm-main-content {
+    background-color: var(--custom-card); /* Sfondo del contenuto principale */
+    border-radius: 6px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Allinea in alto */
+}
+
+.content-header-bar {
+    width: 90%;
+    height: 8px;
+    background-color: var(--custom-muted);
+    border-radius: 3px;
+    margin-bottom: 15px; /* Spazio sotto l'header */
+}
+
+.process-flow-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.process-step {
+    width: 25px;
+    height: 25px;
+    background-color: var(--custom-muted);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--custom-bg-dark);
+    font-size: 0.8em;
+    font-weight: bold;
+}
+.process-step.active {
+    background-color: var(--custom-accent);
+    color: var(--custom-light);
+}
+
+.process-arrow {
+    width: 15px;
+    height: 2px;
+    background-color: var(--custom-muted);
+}
+
+.data-card {
+    background-color: var(--custom-bg-dark);
+    border-radius: 5px;
+    padding: 8px;
+    margin-bottom: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.data-card-title {
+    width: 70%;
+    height: 7px;
+    background-color: var(--custom-muted);
+    border-radius: 2px;
+    margin-bottom: 6px;
+}
+
+.data-chart-line {
+    width: 90%;
+    height: 4px;
+    background-color: var(--custom-accent);
+    border-radius: 1px;
+    margin-bottom: 3px;
+    opacity: 0.8;
+}
+.data-chart-line:nth-child(2) { width: 75%; opacity: 0.7; }
+.data-chart-line:nth-child(3) { width: 85%; opacity: 0.9; }
+
+.key-metric {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+.metric-label {
+    width: 40%;
+    height: 5px;
+    background-color: var(--custom-light);
+    border-radius: 1px;
+    opacity: 0.6;
+}
+.metric-value {
+    width: 30%;
+    height: 5px;
+    background-color: var(--custom-accent);
+    border-radius: 1px;
+    opacity: 0.9;
+}
+
+/*Description*/
+#about .crm-illustration-container{
+    padding-bottom: 20px;
+}
+.growth-stack {
+    display: flex;
+    align-items: flex-end;
+    position: relative;
+    height: 100%;
+    width: 80%;
+    justify-content: space-around;
+}
+
+.data-block {
+    width: 40px;
+    background-color: var(--custom-card);
+    border-radius: 5px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.3);
+    margin: 0 5px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    padding-bottom: 5px;
+    border: 1px solid rgba(255,255,255,0.05); /* Piccolo bordo per definizione */
+}
+
+.data-block:nth-child(1) { height: 60px; }
+.data-block:nth-child(2) { height: 80px; }
+.data-block:nth-child(3) { height: 100px; }
+.data-block:nth-child(4) { height: 120px; }
+
+/* Aggiunti dettagli ai blocchi */
+.data-content {
+    width: 100%;
+    padding: 0 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.data-line {
+    width: 80%; /* Reso più largo */
+    height: 4px;
+    background-color: var(--custom-light);
+    border-radius: 1px;
+    margin-bottom: 4px;
+    opacity: 0.7;
+}
+.data-line:last-of-type { /* Ultima linea più corta per variazione */
+    width: 60%;
+    margin-bottom: 0; /* Rimuovi margin-bottom dall'ultima linea */
+}
+
+.data-block:nth-child(even) .data-line {
+    background-color: var(--custom-muted); /* Colore alternato per le linee */
+}
+
+/* Migliorato il posizionamento della freccia */
+.growth-arrow {
+    position: absolute;
+    bottom: calc(20px + 120px + 10px); /* Padding bottom + altezza blocco più alto + spazio */
+    
+    width: 0;
+    height: 0;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-bottom: 25px solid var(--custom-accent); /* Punta della freccia */
+    z-index: 5;
+    left: 50%; /* Centra orizzontalmente */
+    transform: translateX(-50%); /* Regola per il centro esatto */
+}
+
+.growth-arrow::after {
+    content: '';
+    position: absolute;
+    top: 25px; /* Sotto la punta */
+    left: 50%; /* Centra la base rispetto alla punta */
+    width: 10px;
+    height: 40px;
+    background-color: var(--custom-accent);
+    border-radius: 2px;
+    transform: translateX(-50%); /* Regola per il centro esatto */
+}
+
+.organizational-grid {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 5px;
+    opacity: 0.1; /* Sottile griglia di sfondo */
+    z-index: 0;
+}
+.grid-cell {
+    border: 1px solid var(--custom-light);
+    border-radius: 2px;
+}
+
+/* --- Stili per l'illustrazione "Obiettivi e Percorso" --- */
+.goals-path-illustration-container {
+    position: relative;
+    width: 380px;
+    height: 250px;
+    background-color: var(--illus-bg-color);
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+    margin: 0 auto;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.illustration-elements {
+    position: relative;
+    width: 90%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* The Path */
+.path-line {
+    position: absolute;
+    width: 85%;
+    height: 5px;
+    background-color: var(--path-color);
+    border-radius: 3px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.2);
+    z-index: 2;
+}
+
+/* Milestones */
+.milestone {
+    width: 20px;
+    height: 20px;
+    background-color: var(--milestone-color);
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    z-index: 3;
+    border: 2px solid var(--illus-bg-color); /* Bordo per staccare */
+}
+.milestone.active {
+    background-color: var(--milestone-active-color);
+    box-shadow: 0 0 15px var(--milestone-active-color);
+}
+
+/* Final Goal */
+.final-goal {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translate(50%, -50%); /* Sposta leggermente fuori dal percorso */
+    width: 40px;
+    height: 40px;
+    background-color: var(--final-goal-color);
+    border-radius: 50%;
+    box-shadow: 0 0 25px var(--final-goal-color), 0 0 50px rgba(40,167,69,0.5);
+    z-index: 4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5em;
+    color: var(--illus-bg-color);
+    font-weight: bold;
+    animation: pulse-goal 2s infinite alternate;
+}
+@keyframes pulse-goal {
+    from { transform: translate(50%, -50%) scale(1); opacity: 0.9; }
+    to { transform: translate(50%, -50%) scale(1.08); opacity: 1; }
+}
+.final-goal::before {
+    content: '✓'; /* Simbolo di spunta */
+    line-height: 1;
+}
+
+/* Data Flow */
+.data-flow-container {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    z-index: 1;
+}
+.data-flow-line {
+    width: 2px;
+    height: 60px;
+    background: linear-gradient(to top, var(--data-flow-color), transparent);
+    opacity: 0.6;
+    animation: data-flow 3s linear infinite;
+}
+.data-flow-line:nth-child(2) { animation-delay: 0.5s; }
+.data-flow-line:nth-child(3) { animation-delay: 1s; }
+.data-flow-line:nth-child(4) { animation-delay: 1.5s; }
+.data-flow-line:nth-child(5) { animation-delay: 2s; }
+
+@keyframes data-flow {
+    0% { transform: translateY(0); opacity: 0.6; }
+    50% { transform: translateY(-40px); opacity: 0.9; }
+    100% { transform: translateY(-80px); opacity: 0; }
+}
+
+/* Interface Panels - MODIFICATI ANCORA DI PIÙ */
+.interface-panel {
+    position: absolute;
+    width: 80px;
+    height: 60px;
+    background-color: var(--interface-panel-bg);
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 8px 0;
+    z-index: 2;
+}
+.interface-panel.left {
+    left: 10px;
+    top: 8%; /* Spostato ancora più in alto per maggiore distacco */
+}
+.interface-panel.right {
+    right: 10px;
+    bottom: 8%; /* Spostato ancora più in basso per maggiore distacco */
+}
+.interface-bar {
+    width: 60%;
+    height: 4px;
+    background-color: var(--interface-bar-color);
+    border-radius: 2px;
+    position: relative;
+}
+.interface-bar-fill {
+    height: 100%;
+    width: 70%; /* Esempio di riempimento */
+    background-color: var(--interface-bar-fill-color);
+    border-radius: 2px;
+}
+.interface-bar:nth-child(2) .interface-bar-fill { width: 50%; }
+.interface-bar:nth-child(3) .interface-bar-fill { width: 90%; }
+
+/* Responsive adjustments */
+@media (max-width: 991px) {
+    .dashboard-illustration {
+        height: 220px;
+        width: 100%
+    }
+
+    .crm-illustration-container {
+        width: 280px;
+        height: 180px;
+    }
+    .crm-screen {
+        padding: 8px;
+        gap: 6px;
+    }
+    .crm-sidebar { padding: 6px 4px; }
+    .sidebar-icon { width: 16px; height: 16px; margin-bottom: 10px; }
+    .crm-main-content { padding: 8px; }
+    .content-header-bar { height: 7px; margin-bottom: 12px; }
+
+    .process-flow-container { margin-bottom: 12px; }
+    .process-step { width: 22px; height: 22px; font-size: 0.7em; }
+    .process-arrow { width: 12px; }
+
+    .data-card { padding: 6px; margin-bottom: 6px; }
+    .data-card-title { height: 6px; margin-bottom: 5px; }
+    .data-chart-line { height: 3px; margin-bottom: 2px; }
+    .key-metric { margin-top: 8px; }
+    .metric-label, .metric-value { height: 4px; }
+
+    /*Description*/
+    .growth-stack {
+        width: 90%;
+    }
+    .data-block {
+        width: 35px;
+        margin: 0 4px;
+    }
+    .data-block:nth-child(1) { height: 50px; }
+    .data-block:nth-child(2) { height: 70px; }
+    .data-block:nth-child(3) { height: 90px; }
+    .data-block:nth-child(4) { height: 110px; }
+
+    /* Ricalcolo per la freccia responsive */
+    .growth-arrow {
+        bottom: calc(15px + 110px + 8px); /* padding bottom + altezza blocco più alto + spazio */
+        border-left: 12px solid transparent;
+        border-right: 12px solid transparent;
+        border-bottom: 20px solid var(--custom-accent);
+    }
+    .growth-arrow::after {
+        top: 20px;
+        width: 8px;
+        height: 35px;
+    }
+    .organizational-grid {
+        gap: 4px;
+    }
+
+    .goals-path-illustration-container {
+        width: 320px;
+        height: 220px;
+    }
+    .path-line {
+        width: 80%;
+        height: 4px;
+    }
+    .milestone {
+        width: 18px;
+        height: 18px;
+    }
+    .final-goal {
+        width: 35px;
+        height: 35px;
+        font-size: 1.3em;
+    }
+    .data-flow-line {
+        height: 50px;
+    }
+    @keyframes data-flow {
+        0% { transform: translateY(0); opacity: 0.6; }
+        50% { transform: translateY(-30px); opacity: 0.9; }
+        100% { transform: translateY(-60px); opacity: 0; }
+    }
+    .interface-panel {
+        width: 70px;
+        height: 50px;
+        padding: 6px 0;
+    }
+    .interface-panel.left {
+        top: 5%; /* Adattamento responsive */
+    }
+    .interface-panel.right {
+        bottom: 5%; /* Adattamento responsive */
+    }
+    .interface-bar {
+        height: 3px;
+    }
+}
