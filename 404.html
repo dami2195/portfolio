@@ -1,52 +1,86 @@
 <!DOCTYPE html>
 <html lang="it">
-
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Pagina non trovata - Errore 404 | Damiano Gazzino</title>
-  <meta name="description"
-    content="La pagina che stai cercando non esiste. Torna alla homepage per scoprire i progetti e i servizi offerti da Damiano Gazzino." />
-  <meta name="robots" content="noindex, follow" />
-  <link rel="canonical" href="https://damianogazzino.ch/404.html" />
-  <link rel="alternate" hreflang="x-default" href="https://damianogazzino.ch/404.html" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagina non trovata - Errore 404</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
 
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Montserrat:wght@700&display=swap"
-    rel="stylesheet" />
+        body {
+            background-color: #f4f7f6;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #333;
+        }
 
-  <!-- Favicon -->
-  <link rel="icon" href="images/favicon.ico" />
+        .container {
+            text-align: center;
+            padding: 20px;
+        }
 
-  <!-- CSS -->
-  <link rel="stylesheet" href="https://damianogazzino.ch/css/style.css" />
-  <link rel="stylesheet" href="https://damianogazzino.ch/css/navbar.css" />
-  <link rel="stylesheet" href="https://damianogazzino.ch/css/scrollbar.css" />
-  <link rel="stylesheet" href="https://damianogazzino.ch/css/index.css" />
-  <link rel="stylesheet" href="https://damianogazzino.ch/css/404.css" />
+        h1 {
+            font-size: 10rem;
+            font-weight: 900;
+            color: #24292e; /* Colore stile GitHub */
+            line-height: 1;
+            margin-bottom: 10px;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 1.1rem;
+            color: #666;
+            margin-bottom: 30px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background-color: #2ea44f; /* Verde successo */
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: bold;
+            transition: background 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #2c974b;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+
+        /* Responsive */
+        @media (max-width: 600px) {
+            h1 { font-size: 6rem; }
+            h2 { font-size: 1.5rem; }
+        }
+    </style>
 </head>
+<body>
 
-<body class="error-page dark">
-  <nav aria-label="Menu di navigazione">
-    <ul>
-      <li><a href="/lang/it/index.html#about-me">Chi sono</a></li>
-      <li><a href="/lang/it/index.html#projects">Progetti</a></li>
-      <li><a href="https://www.linkedin.com/in/damiano-gazzino-9983b01a2/">Contattami</a></li>
-    </ul>
-  </nav>
+    <div class="container">
+        <h1>404</h1>
+        <h2>Oops! Pagina non trovata</h2>
+        <p>La pagina che stai cercando è stata spostata, rimossa o non è mai esistita.</p>
+        <a href="lang/en/index.html" class="btn">Torna alla Home</a>
+    </div>
 
-  <main role="main">
-    <section class="container">
-      <h1>Errore 404</h1>
-      <p class="subtitle">La pagina che stai cercando non esiste o è stata rimossa.</p>
-      <a href="https://damianogazzino.ch/lang/en/index.html" class="btn-primary large">Torna alla homepage</a>
-    </section>
-  </main>
-
-  <footer>
-    &copy; 2024 Damiano Gazzino. Tutti i diritti riservati.
-  </footer>
 </body>
-
 </html>
