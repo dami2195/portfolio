@@ -108,7 +108,16 @@
             </div>
             <div class="d-block d-md-none">
                 <ul class="navbar-nav">
-                    <li class="language-switcher nav-item"><button id="lang-btn-tablet"><span>EN ▼</span></button></li>
+                    <li class="language-switcher nav-item position-relative">
+                        <button id="lang-btn-tablet" aria-haspopup="true" aria-expanded="false"
+                            aria-controls="lang-menu-tablet">
+                            <span>IT ▼</span>
+                        </button>
+                        <ul id="lang-menu-tablet" class="lang-dropdown" hidden>
+                            <li><a href="#" class="change-lang" data-lang="it">Italiano</a></li>
+                            <li><a href="#" class="change-lang" data-lang="en">English</a></li>
+                        </ul>
+                    </li>
                 </ul>
             </div>
         </div>
